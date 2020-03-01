@@ -2203,7 +2203,6 @@ select.mobile-device {
     display: inline-block;
     width: 25px;
     margin-right: 10px;
-    border-right: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
 .copyrights {
