@@ -60,14 +60,8 @@
 		<div class="heading">
 			<h1>hello i'm Dominic</h1>
 			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-			<h3 class="cd-headline clip is-full-width">
-				<span>Lorem ipsum dolor sit amet </span>
-				<span class="cd-words-wrapper">
-					<b class="is-visible">Web Developer</b>
-					<b>Web Design</b>
-					<b>Creative Design</b>
-					<b>Graphic Design</b>
-				</span>
+			<h3 id="skills-typewriter" class="cd-headline clip is-full-width">
+				<!-- This is filled via JS-->
 			</h3>
 		</div>
 	</section>
@@ -279,5 +273,15 @@
     </div><!-- end copyrights -->
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+	<!-- region JS embeds -->
+	<script type="text/javascript" src="https://unpkg.com/typewriter-effect@2.13.0/dist/core.js" async defer></script>
+	<script type="text/javascript">
+		new Typewriter('#skills-typewriter', {
+			strings: ['Hello', 'World', 'This is a test'],
+			autoStart: true,
+			loop: true,
+		});
+	</script>
 </body>
 </html>
