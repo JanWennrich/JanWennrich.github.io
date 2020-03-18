@@ -332,27 +332,6 @@ a img.aligncenter {
     SECTIONS
 -------------------------------------------------------------------*/
 
-.main-banner{
-	height: 100%;
-	position: relative;
-}
-
-.main-banner{
-	display: table;
-    width: 100%;
-	text-align: center;
-}
-.main-banner::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #000;
-    z-index: 0;
-    opacity: .6;
-}
 .heading{
 	color: #fff;
 	display: table-cell;
@@ -2456,3 +2435,65 @@ select.mobile-device {
     border-color: rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
 }
+
+
+
+#home {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    text-align: center;
+    height: 100%;
+    color: white;
+}
+
+#home::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 0;
+    opacity: .6;
+}
+
+div.heading {
+    grid-row: 1;
+    place-self: center;
+}
+
+#down-button {
+    grid-row: 2;
+    place-self: center;
+    z-index: 1;
+}
+
+#down-button button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/** region bounce animation */
+/** Inspired by: https://codepen.io/bisaillonyannick/pen/pvZeGg */
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+/** endregion */
