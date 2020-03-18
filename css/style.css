@@ -2177,17 +2177,6 @@ select.mobile-device {
     margin-right: 10px;
 }
 
-.copyrights {
-    border-top: 1px dashed rgba(255, 255, 255, 0.1);
-    background-color: #1f1f1f;
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    padding: 30px 0px;
-    overflow: hidden;
-}
-
-
 /* Footer left */
 
 .footer-distributed .footer-left {
@@ -2481,6 +2470,39 @@ div.heading {
     color: white;
 }
 
+
+footer {
+    background-color: #1f1f1f;
+    padding: 30px 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: #999;
+}
+
+
+#footer-socials-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#footer-socials-title h3 {
+    color: #999;
+}
+
+#footer-socials-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#footer-socials-links a {
+    color: #999;
+}
+
+#footer-socials-links a:hover {
+    color: white;
+}
 
 /** region bounce animation */
 /** Inspired by: https://codepen.io/bisaillonyannick/pen/pvZeGg */
