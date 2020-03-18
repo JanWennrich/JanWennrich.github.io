@@ -275,10 +275,25 @@
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
 	<!-- region JS embeds -->
-	<script type="text/javascript" src="https://unpkg.com/typewriter-effect@2.13.0/dist/core.js" async defer></script>
+	<script type="text/javascript" src="https://unpkg.com/typewriter-effect@2.13.0/dist/core.js"></script>
 	<script type="text/javascript">
+		var strings = [
+			'Developer',
+			'Project Manager',
+			'Bachelor of Computer Science',
+			'Problem Solver',
+			'Nerd',
+			'Curious',
+			'Linux Lover',
+			'CLI Connoisseur',
+			'Git Guru'
+		].sort(function() {
+			// Kind of randomizes the array (source: https://stackoverflow.com/a/18650169)
+			return 0.5 - Math.random()
+		});
+
 		new Typewriter('#skills-typewriter', {
-			strings: ['Hello', 'World', 'This is a test'],
+			strings: strings,
 			autoStart: true,
 			loop: true,
 		});
