@@ -2430,6 +2430,9 @@ select.mobile-device {
 }
 
 
+#nav-item-about {
+    word-spacing: -0.3em;
+}
 
 #home {
     display: grid;
