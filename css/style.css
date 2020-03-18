@@ -12,6 +12,10 @@
     SKELETON
 -------------------------------------------------------------------*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: #999999;
     font-size: 14px;
