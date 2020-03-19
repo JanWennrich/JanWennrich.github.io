@@ -2455,29 +2455,23 @@ nav#mainNav.with-background {
     text-align: center;
     height: 100%;
     color: white;
-    background: url('/uploads/banner-01.jpg') center no-repeat;
-    background-size: cover;
-}
-
-#home::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #000;
-    z-index: 0;
-    opacity: .6;
 }
 
 #home a:hover {
     color: rgba(255,255,255,.5);
 }
 
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #0b0a14;
+}
+
 div.heading {
     grid-row: 1;
     place-self: center;
+    pointer-events: none;
 }
 
 #down-button {

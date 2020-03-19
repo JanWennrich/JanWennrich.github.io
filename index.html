@@ -60,7 +60,8 @@
       </div>
     </nav>
 	
-	<section id="home" class="main-banner parallaxie">
+	<section id="home">
+		<div id="particles-js"></div>
 		<div class="heading">
 			<h1>Hello I'm Jan</h1>
 			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
@@ -259,7 +260,9 @@
 	<script src="/js/scrollListener.js"></script>
 
 	<!-- region JS embeds -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/typewriter-effect@2.13.0/dist/core.js"></script>
+
 	<script type="text/javascript">
 		var strings = [
 			'Developer',
@@ -281,6 +284,10 @@
 			autoStart: true,
 			loop: true,
 		});
+	</script>
+
+	<script type="text/javascript">
+		particlesJS.load('particles-js', '/assets/particlesjs/config_stars.json');
 	</script>
 </body>
 </html>
