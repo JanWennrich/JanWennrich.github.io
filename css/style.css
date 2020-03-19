@@ -2432,7 +2432,7 @@ select.mobile-device {
 
 nav#mainNav {
     background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, transparent 50%, #333333 50%);
+    background-image: linear-gradient(to bottom, transparent 50%, #191829 50%);
     transition: background-position 250ms;
 }
 
@@ -2492,12 +2492,12 @@ div.heading {
 
 
 footer {
-    background-color: #1f1f1f;
+    background-color: #191829;
     padding: 30px 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    color: #999;
+    color: white;
 }
 
 
@@ -2507,7 +2507,7 @@ footer {
 }
 
 #footer-socials-title h3 {
-    color: #999;
+    color: white;
 }
 
 #footer-socials-links {
@@ -2517,11 +2517,11 @@ footer {
 }
 
 #footer-socials-links a {
-    color: #999;
+    color: white;
 }
 
 #footer-socials-links a:hover {
-    color: white;
+    color: rgba(255,255,255,.5);
 }
 
 /** region bounce animation */
