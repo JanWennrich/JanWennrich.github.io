@@ -2430,6 +2430,17 @@ select.mobile-device {
 }
 
 
+nav#mainNav {
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, transparent 50%, #333333 50%);
+    transition: background-position 250ms;
+}
+
+
+nav#mainNav.with-background {
+    background-position: 0 -100%;
+}
+
 #nav-item-about {
     word-spacing: -0.3em;
 }
