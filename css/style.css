@@ -2441,6 +2441,10 @@ nav#mainNav.with-background {
     background-position: 0 -100%;
 }
 
+#logo {
+    height: 30px;
+}
+
 #nav-link-about {
     word-spacing: -0.3em;
 }
