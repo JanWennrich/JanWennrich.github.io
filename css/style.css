@@ -253,22 +253,22 @@ ul, li, ol{
 }
 
 
-.services-inner-box{
+.skill-box{
     padding: 15px;
     background: #ffffff;
     margin-bottom: 30px;
-}
-.ser-icon{
-    width: 90px;
-    height: 90px;
     text-align: center;
-    line-height: 90px;
 }
-.ser-icon i{
+.skill-icon{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+.skill-icon i{
     font-size: 50px;
     color: #333333;
 }
-.services-inner-box h2{
+.skill-box h2{
     font-size: 22px;
     font-weight: 600;
 }
