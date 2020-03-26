@@ -309,19 +309,71 @@ button:hover,
     background: #fff;
     padding: 12px 40px;
     border: none;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 
-.gallery-single{
-    margin: 30px 15px;;
-}
+#references-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-.gallery-single {
-    position: relative;
+    width: 100%;
+    max-height: 730px; /* Using max-height here for a working transition */
+
     overflow: hidden;
+    transition: max-height 1250ms;
+}
+
+#references-wrapper.extended {
+    max-height: 5000px; /* Using max-height here for a working transition */
+}
+
+.reference-item {
+    width: 320px;
+    height: 320px;
+    background: #ffffff;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 50px
+}
+
+#reference-item-bdwb img{
+    filter: none;
+}
+
+#reference-item-hkl {
+    padding: 70px;
+}
+
+#reference-item-myelisting img {
+    filter: invert(1);
+}
+
+.reference-item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#references-extend-button {
+    width: 320px;
+    margin: 0 auto;
+}
+
+#references-extend-button-show-less-design {
+    display: none;
+}
+
+#references-extend-button.extended #references-extend-button-show-less-design {
+    display: block;
+}
+
+#references-extend-button.extended #references-extend-button-show-more-design {
+    display: none;
 }
 
 .gallery-list .img-overlay {
