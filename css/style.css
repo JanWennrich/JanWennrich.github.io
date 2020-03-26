@@ -93,6 +93,33 @@ ul, li, ol{
 }
 
 
+button,
+.button {
+    color: #333333;
+
+    transition: all 0.45s;
+
+    position: relative;
+
+    border: 1px solid #333333;
+    background: none;
+    width: auto;
+
+    overflow: hidden;
+    padding: 0 18px;
+
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: #191829;
+    color: white;
+}
 
 /*------------------------------------------------------------------
     HEADER
@@ -193,53 +220,6 @@ ul, li, ol{
     margin: 0 0 25px;
     padding: 0;
     text-transform: none;
-}
-
-
-.btn-hover-new{
-    color: #333333;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    position: relative;
-    border: 1px solid #333333;
-    overflow: hidden;
-    padding: 0px 18px;
-    display: inline-block;
-}
-
-.sim-btn{
-    line-height: 50px;
-    height: 50px;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0px;
-    cursor: pointer;
-}
-
-.btn-hover-new::after {
-    content: attr(data-text);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    -webkit-transform: translate(-30%, 0);
-    transform: translate(-30%, 0);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.btn-hover-new span {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
 }
 
 .right-box-pro{
