@@ -258,13 +258,15 @@ button:hover,
 }
 
 @media only screen and (max-width: 1199px) {
-    .item {
+    .item,
+    #references-extend-button {
         width: 48% !important;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    .item {
+    .item,
+    #references-extend-button {
         width: 100% !important;
     }
 }
