@@ -344,7 +344,8 @@ button:hover,
     justify-content: center;
     align-items: center;
     padding: 30px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    flex-direction: column;
 }
 
 .reference-item {
