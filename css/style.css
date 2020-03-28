@@ -257,6 +257,18 @@ button:hover,
     }
 }
 
+@media only screen and (max-width: 1199px) {
+    .item {
+        width: 48% !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .item {
+        width: 100% !important;
+    }
+}
+
 
 .skill-box{
     padding: 15px;
@@ -266,17 +278,6 @@ button:hover,
     width: 350px;
 }
 
-@media only screen and (max-width: 1199px) {
-    .skill-box {
-        width: 48%;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .skill-box {
-        width: 100%;
-    }
-}
 
 .skill-icon{
     width: 100%;
