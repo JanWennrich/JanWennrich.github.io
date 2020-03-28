@@ -263,7 +263,21 @@ button:hover,
     background: #ffffff;
     margin-bottom: 30px;
     text-align: center;
+    width: 350px;
 }
+
+@media only screen and (max-width: 1199px) {
+    .skill-box {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .skill-box {
+        width: 100%;
+    }
+}
+
 .skill-icon{
     width: 100%;
     text-align: center;
