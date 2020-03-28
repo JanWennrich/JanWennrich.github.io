@@ -376,8 +376,9 @@ button:hover,
     filter: none;
 }
 
-#reference-item-hkl {
-    padding: 70px;
+#reference-item-hkl img {
+    max-width: 200px;
+    max-height: 200px;
 }
 
 #reference-item-myelisting img {
@@ -385,8 +386,8 @@ button:hover,
 }
 
 .reference-item img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 .reference-item-overlay {
