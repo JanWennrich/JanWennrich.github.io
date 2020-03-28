@@ -325,6 +325,13 @@ button:hover,
     transition: max-height 1250ms;
 }
 
+
+@media only screen and (max-width: 767px) {
+    #references-wrapper {
+        justify-content: space-around;
+    }
+}
+
 #references-wrapper.extended {
     max-height: 5000px; /* Using max-height here for a working transition */
 }
