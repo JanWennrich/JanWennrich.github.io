@@ -312,7 +312,7 @@ button:hover,
     border-radius: 0;
 }
 
-.multiple-item-listing {
+.item-listing {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -329,7 +329,7 @@ button:hover,
 
 
 @media only screen and (max-width: 767px) {
-    .multiple-item-listing {
+    .item-listing {
         justify-content: space-around;
     }
 }
