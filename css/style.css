@@ -312,13 +312,15 @@ button:hover,
     border-radius: 0;
 }
 
-
-#references-wrapper {
+.multiple-item-listing {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
     width: 100%;
+}
+
+#references-wrapper {
     max-height: 730px; /* Using max-height here for a working transition */
 
     overflow: hidden;
@@ -327,7 +329,7 @@ button:hover,
 
 
 @media only screen and (max-width: 767px) {
-    #references-wrapper {
+    .multiple-item-listing {
         justify-content: space-around;
     }
 }
@@ -336,17 +338,20 @@ button:hover,
     max-height: 5000px; /* Using max-height here for a working transition */
 }
 
-.reference-item {
-    width: 320px;
-    height: 320px;
+.item {
     background: #ffffff;
-    -webkit-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 10px #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
     margin-bottom: 50px
+}
+
+.reference-item {
+    width: 320px;
+    height: 320px;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
 }
 
 #reference-item-bdwb img{
