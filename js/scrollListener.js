@@ -1,7 +1,6 @@
 // Wrapped in a closure to prevent global variables
 (function () {
     var NavBar            = document.getElementById('mainNav'),
-        NavLinkHome       = document.getElementById('nav-link-home'),
         NavLinkAbout      = document.getElementById('nav-link-about'),
         NavLinkSkillset   = document.getElementById('nav-link-skillset'),
         NavLinkReferences = document.getElementById('nav-link-references');
@@ -67,13 +66,7 @@
             return;
         }
 
-        var isScrolledPastHome = window.scrollY > homeSectionStart;
-
-        if (isScrolledPastHome) {
-            addActiveClassToElement(NavLinkHome);
-
-            return;
-        }
+        resetNavLinks();
     }
 
     /**
@@ -96,7 +89,6 @@
      */
     function resetNavLinks()
     {
-        NavLinkHome.classList.remove('active');
         NavLinkAbout.classList.remove('active');
         NavLinkSkillset.classList.remove('active');
         NavLinkReferences.classList.remove('active');
