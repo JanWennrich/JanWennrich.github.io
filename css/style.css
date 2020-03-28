@@ -161,6 +161,20 @@ button:hover,
     width: 50%;
 }
 
+.nav-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar-brand {
+        margin: 0 auto;
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+}
+
 /*------------------------------------------------------------------
     SECTIONS
 -------------------------------------------------------------------*/
