@@ -233,6 +233,31 @@ button:hover,
 }
 
 
+.item {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+
+.item-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .item-listing {
+        justify-content: space-around;
+    }
+}
+
+
 .skill-box{
     padding: 15px;
     background: #ffffff;
@@ -312,13 +337,6 @@ button:hover,
     border-radius: 0;
 }
 
-.item-listing {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    width: 100%;
-}
 
 #references-wrapper {
     max-height: 730px; /* Using max-height here for a working transition */
@@ -328,25 +346,10 @@ button:hover,
 }
 
 
-@media only screen and (max-width: 767px) {
-    .item-listing {
-        justify-content: space-around;
-    }
-}
-
 #references-wrapper.extended {
     max-height: 5000px; /* Using max-height here for a working transition */
 }
 
-.item {
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    margin-bottom: 50px;
-    flex-direction: column;
-}
 
 .reference-item {
     width: 320px;
