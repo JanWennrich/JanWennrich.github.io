@@ -46,6 +46,7 @@
 
         if (isScrolledPastReferences) {
             addActiveClassToElement(NavLinkReferences);
+            setLocationHash('references');
 
             return;
         }
@@ -54,6 +55,7 @@
 
         if (isScrolledPastSkillset) {
             addActiveClassToElement(NavLinkSkillset);
+            setLocationHash('skillset');
 
             return;
         }
@@ -62,11 +64,13 @@
 
         if (isScrolledPastAbout) {
             addActiveClassToElement(NavLinkAbout);
+            setLocationHash('about');
 
             return;
         }
 
         resetNavLinks();
+        setLocationHash('');
     }
 
     /**
@@ -92,6 +96,17 @@
         NavLinkAbout.classList.remove('active');
         NavLinkSkillset.classList.remove('active');
         NavLinkReferences.classList.remove('active');
+    }
+
+
+    /**
+     * Sets the hash in the URL (e.g. #about).
+     *
+     * @param hash
+     */
+    function setLocationHash(hash)
+    {
+        window.location.hash = hash;
     }
 
     document.addEventListener('scroll', function () {
