@@ -88,15 +88,10 @@ a {
     outline: none;
 }
 
-blockquote {
-    margin: 20px 0 20px;
-    padding: 30px;
-}
-
 ul, li, ol{
-    margin: 0px;
+    margin: 0;
     list-style: none;
-    padding: 0px;
+    padding: 0;
 }
 
 
@@ -145,9 +140,6 @@ button:hover,
 .navbar-dark .navbar-nav .nav-link:hover{
     color: rgba(255,255,255,.5);
 }
-.navbar-dark .navbar-nav .nav-link.active{
-    font-weight: 600;
-}
 .navbar-dark .navbar-nav .nav-link::after {
     content: '';
     width: 0;
@@ -163,9 +155,6 @@ button:hover,
     -webkit-transition: all .5s;
     transition: all .5s;
     z-index: -1;
-}
-.navbar-dark .navbar-nav .nav-link.active::after {
-    width: 100%;
 }
 
 .nav-item:not(:last-child) {
@@ -245,8 +234,8 @@ button:hover,
 
 .right-box-pro{
     position: relative;
-    -webkit-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.3);
 }
 .right-box-pro img{
     position: relative;
@@ -331,50 +320,6 @@ button:hover,
 }
 
 
-.hoverbutton {
-    background-color: #333333;
-    position: absolute;
-    color: #ffffff !important;
-    top: 70%;
-    font-size: 21px;
-    z-index: 12;
-    left: 0;
-    opacity: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    margin: -20px auto;
-}
-
-.filter-button-group{
-    border: 1px solid #e4e4e4;
-    border-radius: 0px;
-    margin: 10px 0px;
-    display: inline-block;
-}
-
-.filter-button-group button.active{
-    background: #333333;
-    color: #fff;
-    box-shadow: 2px 20px 45px 5px rgba(0,0,0,.2);
-}
-
-.filter-button-group button{
-    color: #333;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    background: #fff;
-    padding: 12px 40px;
-    border: none;
-    border-radius: 0;
-}
-
-
 #references-wrapper {
     max-height: 730px; /* Using max-height here for a working transition */
 
@@ -425,22 +370,10 @@ button:hover,
     color: white;
 }
 
-.reference-item.showing-overlay .reference-item-overlay,
+
 .reference-item:hover .reference-item-overlay {
     visibility: visible;
     opacity: 1;
-}
-
-.reference-item-overlay-close-button {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 1.3em;
-    cursor: pointer;
-}
-
-.reference-item-overlay-close-button:hover {
-    color: #999999;
 }
 
 
@@ -459,22 +392,6 @@ button:hover,
 
 #references-extend-button.extended #references-extend-button-show-more-design {
     display: none;
-}
-
-.gallery-list .img-overlay {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    background: rgba(51, 51, 51, 0.80);
-    color: #35424C;
-    opacity: 0;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    z-index: 2;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
 }
 
 .dmtop {
