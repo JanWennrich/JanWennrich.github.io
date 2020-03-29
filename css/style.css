@@ -2,6 +2,13 @@ html {
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'Roboto Mono', monospace;
+    font-display: swap;
+    src: local('Roboto Mono'), url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+}
+
+
 body {
     color: #999999;
     font-size: 14px;
