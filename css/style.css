@@ -471,6 +471,36 @@ div.heading {
 }
 
 
+.tool-item {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.tool-item-icon {
+    margin: 0;
+}
+
+.tool-item img {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(1) contrast(0) brightness(0.25);
+}
+
+#tool-item-ionic img {
+    filter: grayscale(1) contrast(0) brightness(0.4);
+}
+
+#tool-item-phpstorm img {
+    filter: grayscale(1) contrast(0) brightness(0.35);
+}
+
+#tools-text {
+    text-align: center;
+    margin-top: 30px;
+}
+
 footer {
     background-color: #191829;
     padding: 30px 0;
