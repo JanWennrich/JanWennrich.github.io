@@ -248,7 +248,6 @@ button:hover,
 
 
 .item {
-    background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -338,6 +337,7 @@ button:hover,
 
 
 .reference-item {
+    background: #ffffff;
     width: 320px;
     height: 320px;
     -webkit-box-shadow: 0 0 10px #ccc;
