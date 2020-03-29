@@ -23,13 +23,13 @@
      */
     function styleNavbar()
     {
-        var isScrolledPastHome = window.scrollY > homeSectionEnd;
+        var isScrolling = window.scrollY > 0;
 
-        if (isScrolledPastHome && NavBar.classList.contains('with-background')) {
+        if (isScrolling && NavBar.classList.contains('with-background')) {
             return;
         }
 
-        if (isScrolledPastHome) {
+        if (isScrolling) {
             NavBar.classList.add('with-background');
             return;
         }
