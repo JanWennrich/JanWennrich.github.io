@@ -6,3 +6,4 @@ gen
 css/purged/*
 !css/purged/README.md
 node_modules
+index.critical.html

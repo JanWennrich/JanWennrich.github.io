@@ -1,8 +1,10 @@
 {
   "devDependencies": {
-    "purgecss": "^2.1.0"
+    "purgecss": "^2.1.0",
+    "critical": "^1.3.9"
   },
   "scripts": {
-    "purge-css": "purgecss --config assets/purgecss/config.js --output css/purged"
+    "purge-css": "purgecss --config assets/purgecss/config.js --output css/purged",
+    "critical-css": "cat index.html | critical --inline > index.critical.html"
   }
 }
