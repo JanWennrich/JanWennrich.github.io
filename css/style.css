@@ -157,6 +157,10 @@ button:hover,
     z-index: -1;
 }
 
+.navbar-dark .navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
 .nav-item:not(:last-child) {
     margin-right: 20px;
 }
