@@ -488,6 +488,10 @@ div.heading {
     filter: grayscale(1) contrast(0) brightness(0.25);
 }
 
+#tool-item-quiqqer img {
+    filter: grayscale(1) contrast(0) brightness(0.4);
+}
+
 #tool-item-ionic img {
     filter: grayscale(1) contrast(0) brightness(0.4);
 }
