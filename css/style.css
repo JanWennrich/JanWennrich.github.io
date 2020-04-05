@@ -496,6 +496,10 @@ div.heading {
     filter: grayscale(1) contrast(0) brightness(0.35);
 }
 
+#tool-item-composer img {
+    filter: grayscale(1) contrast(0) brightness(0.35)
+}
+
 #tools-text {
     text-align: center;
     margin-top: 30px;
