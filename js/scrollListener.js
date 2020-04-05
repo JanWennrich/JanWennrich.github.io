@@ -94,10 +94,29 @@
         NavLinkReferences.classList.remove('active');
     }
 
+
+    /**
+     * Sets the brightness of the home-section depending on the scroll distance.
+     * The further the user scrolled the darker the home section becomes
+     */
+    function fadeoutHomeSection()
+    {
+        if (window.scrollY > homeSectionEnd) {
+            return;
+        }
+
+        var brightness = 1 - (window.scrollY / homeSectionEnd);
+
+        HomeSection.style.filter = 'brightness(' + brightness + ')';
+    }
+
     document.addEventListener('scroll', function () {
         styleNavbar();
         updateNavLinks();
+        fadeoutHomeSection();
     }, {capture: false, passive: true});
+
+    fadeoutHomeSection();
 
     // Initially style the navbar correctly if we're already scrolled past home section.
     // This could happen if the page get's reloaded.
