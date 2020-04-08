@@ -488,20 +488,13 @@ div.heading {
 }
 
 .tool-item img {
-    width: 50px;
-    height: 50px;
-    filter: grayscale(1) contrast(0) brightness(1);
+    max-width: 50px;
+    max-height: 50px;
+    filter: grayscale(1);
 }
 
-#tool-item-quiqqer img:hover,
-#tool-item-ionic img:hover {
-    filter: grayscale(1) contrast(0) brightness(0.4);
-}
-
-#tool-item-composer img:hover,
-#tool-item-kubuntu img:hover,
-#tool-item-phpstorm img:hover {
-    filter: grayscale(1) contrast(0) brightness(0.35)
+.tool-item img:hover {
+    filter: none;
 }
 
 @media only screen and (max-width: 767px) {
