@@ -7,7 +7,7 @@
     --balloon-color: #333333;
     --balloon-font-size: inherit;
     --balloon-move: 3px;
-    --balloon-distance: 3px;
+    --balloon-distance: 7px;
     --ballon-transition-speed: .1s;
 }
 
@@ -85,7 +85,7 @@
     border: 5px solid transparent;
     border-bottom-color: var(--balloon-color);
     left: 50%;
-    top: 89%;
+    top: 93%;
     transform: translate(-50%, calc(var(--balloon-move) * -1));
 }
 
