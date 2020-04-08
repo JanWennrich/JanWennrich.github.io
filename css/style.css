@@ -273,14 +273,14 @@ button:hover,
 @media only screen and (max-width: 1199px) {
     .item,
     #references-extend-button {
-        width: 48% !important;
+        width: 48%;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .item,
     #references-extend-button {
-        width: 100% !important;
+        width: 100%;
     }
 }
 
@@ -500,6 +500,12 @@ div.heading {
 #tool-item-kubuntu img,
 #tool-item-phpstorm img {
     filter: grayscale(1) contrast(0) brightness(0.35)
+}
+
+@media only screen and (max-width: 767px) {
+    #tools .tool-item {
+        width: calc(100% / 3);
+    }
 }
 
 #tools-text {
