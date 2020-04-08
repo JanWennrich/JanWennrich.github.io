@@ -478,27 +478,29 @@ div.heading {
     height: 100px;
 }
 
-.tool-item-icon {
+.tool-item-icon i {
     margin: 0;
+    color: #999999;
+}
+
+.tool-item-icon:hover i {
+    color: #333333;
 }
 
 .tool-item img {
     width: 50px;
     height: 50px;
-    filter: grayscale(1) contrast(0) brightness(0.25);
+    filter: grayscale(1) contrast(0) brightness(1);
 }
 
-#tool-item-quiqqer img {
+#tool-item-quiqqer img:hover,
+#tool-item-ionic img:hover {
     filter: grayscale(1) contrast(0) brightness(0.4);
 }
 
-#tool-item-ionic img {
-    filter: grayscale(1) contrast(0) brightness(0.4);
-}
-
-#tool-item-composer img,
-#tool-item-kubuntu img,
-#tool-item-phpstorm img {
+#tool-item-composer img:hover,
+#tool-item-kubuntu img:hover,
+#tool-item-phpstorm img:hover {
     filter: grayscale(1) contrast(0) brightness(0.35)
 }
 
