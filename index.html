@@ -46,6 +46,7 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/balloon.css">
+    <link rel="stylesheet" href="css/avatar.css">
 
 	<!-- Font Awesome-->
 	<link rel="preload" href="/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -81,8 +82,15 @@
 	<section id="home">
 		<div id="particles-js"></div>
 		<div class="heading">
-			<h1>Hello World</h1>
-			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+			<div id="avatar">
+				<div id="avatar-eyes">
+					<div class='avatar-eye'></div>
+					<div class='avatar-eye'></div>
+				</div>
+				<img id="avatar-body" src="/images/avatar_no_eyes.png"/>
+			</div>
+			<p>My name is Jan and in <span id="age"><!-- filled via JS below --></span> years I became a:</p>
+			<script>/* calculate age: */ document.getElementById('age').innerText = Math.floor((new Date() - new Date('1997-04-06').getTime()) / 3.15576e+10).toString()</script>
 			<h2 id="skills-typewriter" class="cd-headline clip is-full-width">
 				Software Developer
 				<!-- This is filled via JS-->
@@ -624,7 +632,6 @@
 			'Bachelor of Computer Science',
 			'Problem Solver',
 			'Nerd',
-			'Curious',
 			'Linux Lover',
 			'CLI Connoisseur',
 			'Git Guru'
@@ -642,6 +649,25 @@
 
 	<script type="text/javascript">
 		particlesJS.load('particles-js', '/assets/particlesjs/config_stars.json');
+	</script>
+
+	<script>
+		(function () {
+			var HomeSection = document.getElementById('home'),
+				Eyes         = HomeSection.getElementsByClassName('avatar-eye');
+
+			HomeSection.addEventListener('mousemove', function (event) {
+				 for (var Eye of Eyes) {
+					var eyeBoundingClientRect = Eye.getBoundingClientRect(),
+						x   = (eyeBoundingClientRect.x) + (eyeBoundingClientRect.width / 2),
+						y   = (eyeBoundingClientRect.y) + (eyeBoundingClientRect.height / 2),
+						rad = Math.atan2(event.pageX - x, event.pageY - y),
+						rot = (rad * (180 / Math.PI) * -1) + 180;
+
+					Eye.style.transform = 'rotate(' + rot + 'deg)';
+				}
+			});
+		})();
 	</script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+#avatar-eyes {
+    position: absolute;
+    top: 137px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-eye {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    height: 17px;
+    width: 17px;
+    background: #CCC;
+    margin: 0 26px;
+}
+.avatar-eye:after { /*pupil*/
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    content: " ";
+}
+
+
+#avatar-body {
+    position: relative;
+    height: 350px;
+}
