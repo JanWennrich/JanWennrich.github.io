@@ -704,7 +704,7 @@
 			var HomeSection = document.getElementById('home'),
 				Eyes         = HomeSection.getElementsByClassName('avatar-eye');
 
-			HomeSection.addEventListener('mousemove', function (event) {
+			HomeSection.addEventListener('mousemove', throttle(function (event) {
 				 for (var Eye of Eyes) {
 					var eyeBoundingClientRect = Eye.getBoundingClientRect(),
 						x   = (eyeBoundingClientRect.x) + (eyeBoundingClientRect.width / 2),
@@ -714,7 +714,7 @@
 
 					Eye.style.transform = 'rotate(' + rot + 'deg)';
 				}
-			});
+			}, 60), {capture: false, passive: true});
 		})();
 	</script>
 </body>
