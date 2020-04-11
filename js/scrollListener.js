@@ -110,11 +110,11 @@
         HomeSection.style.filter = 'brightness(' + brightness + ')';
     }
 
-    document.addEventListener('scroll', function () {
+    document.addEventListener('scroll', throttle(function () {
         styleNavbar();
         updateNavLinks();
         fadeoutHomeSection();
-    }, {capture: false, passive: true});
+    }, 250), {capture: false, passive: true});
 
     fadeoutHomeSection();
 
