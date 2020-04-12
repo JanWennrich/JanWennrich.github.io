@@ -18,6 +18,8 @@
     var ReferencesSection      = document.getElementById('references'),
         referencesSectionStart = ReferencesSection.offsetTop - NavBar.offsetHeight;
 
+    var isScrollingTimeout = false;
+
     /**
      * Adds class "with-background" to the nav bar if the window is scrolled past the Home section.
      */
@@ -110,10 +112,24 @@
         HomeSection.style.filter = 'brightness(' + brightness + ')';
     }
 
+    function setScrollStatus()
+    {
+        document.body.classList.add('is-scrolling');
+
+        // Clear our timeout throughout the scroll
+        window.clearTimeout(isScrollingTimeout);
+
+        // Set a timeout to run after scrolling ends
+        isScrollingTimeout = setTimeout(function () {
+            document.body.classList.remove('is-scrolling');
+        }, 300);
+    }
+
     document.addEventListener('scroll', throttle(function () {
         styleNavbar();
         updateNavLinks();
         fadeoutHomeSection();
+        setScrollStatus();
     }, 250), {capture: false, passive: true});
 
     fadeoutHomeSection();
