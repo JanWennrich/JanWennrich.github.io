@@ -87,7 +87,41 @@
 					<div class='avatar-eye'></div>
 					<div class='avatar-eye'></div>
 				</div>
-				<img id="avatar-body" src="/images/avatar_no_eyes.png"/>
+				<div id="avatar-left-eyebrow">
+					<picture>
+						<source srcset="/images/avatar/eyebrow.webp" type="image/webp">
+						<source srcset="/images/avatar/eyebrow.png" type="image/png">
+						<img src="/images/avatar/eyebrow.png"/>
+					</picture>
+				</div>
+				<div id="avatar-right-eyebrow">
+					<picture>
+						<source srcset="/images/avatar/eyebrow.webp" type="image/webp">
+						<source srcset="/images/avatar/eyebrow.png" type="image/png">
+						<img src="/images/avatar/eyebrow.png"/>
+					</picture>
+				</div>
+				<div id="avatar-mouth">
+					<picture>
+						<source srcset="/images/avatar/mouth.webp" type="image/webp">
+						<source srcset="/images/avatar/mouth.png" type="image/png">
+						<img src="/images/avatar/mouth.png"/>
+					</picture>
+				</div>
+				<div id="avatar-lower-lip">
+					<picture>
+						<source srcset="/images/avatar/lower_lip.webp" type="image/webp">
+						<source srcset="/images/avatar/lower_lip.png" type="image/png">
+						<img src="/images/avatar/lower_lip.png"/>
+					</picture>
+				</div>
+				<div id="avatar-body">
+					<picture>
+						<source srcset="/images/avatar/avatar_blank.webp" type="image/webp">
+						<source srcset="/images/avatar/avatar_blank.png" type="image/png">
+						<img src="/images/avatar/avatar_blank.png"/>
+					</picture>
+				</div>
 			</div>
 			<p>My name is Jan and in <span id="age"><!-- filled via JS below --></span> years I became a:</p>
 			<script>/* calculate age: */ document.getElementById('age').innerText = Math.floor((new Date() - new Date('1997-04-06').getTime()) / 3.15576e+10).toString()</script>
@@ -663,6 +697,39 @@
 				return result;
 			};
 		}
+	</script>
+
+	<script type="text/javascript">
+		/**
+		 * Debounce functions for better performance
+		 * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+		 * @param  {Function} fn The function to debounce
+		 */
+		function debounce(fn)
+		{
+
+			// Setup a timer
+			var timeout;
+
+			// Return a function to run debounced
+			return function () {
+
+				// Setup the arguments
+				var context = this;
+				var args = arguments;
+
+				// If there's a timer, cancel it
+				if (timeout) {
+					window.cancelAnimationFrame(timeout);
+				}
+
+				// Setup the new requestAnimationFrame()
+				timeout = window.requestAnimationFrame(function () {
+					fn.apply(context, args);
+				});
+
+			}
+		};
 	</script>
 
 	<script src="/js/scrollListener.js"></script>

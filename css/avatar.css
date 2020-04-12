@@ -3,6 +3,17 @@
     --avatar-eye-size: 17px;
 }
 
+#avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#avatar img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #avatar-eyes {
     position: absolute;
     top: 116px;
@@ -36,4 +47,67 @@
 #avatar-body {
     position: relative;
     height: 300px;
+}
+
+#avatar-left-eyebrow,
+#avatar-right-eyebrow,
+#avatar-lower-lip,
+#avatar-mouth {
+    position: absolute;
+    z-index: 5;
+    transition: all 250ms linear;
+}
+
+#avatar-left-eyebrow,
+#avatar-right-eyebrow {
+    top: 90px;
+    width: 42px;
+}
+
+body.is-scrolling #avatar-left-eyebrow,
+body.is-scrolling #avatar-right-eyebrow {
+    top: 75px;
+}
+
+#avatar-left-eyebrow {
+    position: absolute;
+    margin: 0 -30px;
+    transform: scaleX(-1);
+}
+
+body.is-scrolling #avatar-left-eyebrow {
+    transform: scaleX(-1) rotate(10deg);
+}
+
+#avatar-right-eyebrow {
+    position: absolute;
+    margin: 0 30px;
+}
+
+body.is-scrolling #avatar-right-eyebrow {
+    transform: rotate(10deg);
+}
+
+#avatar-lower-lip {
+    position: absolute;
+    top: 192px;
+    width: 55px;
+    z-index: 6;
+}
+
+body.is-scrolling #avatar-lower-lip {
+    top: 205px;
+    width: 28px;
+}
+
+#avatar-mouth {
+    top: 195px;
+    /*width: 48px;*/
+    height: 4px;
+    z-index: 4;
+}
+
+body.is-scrolling #avatar-mouth {
+    width: 58px;
+    height: 20px;
 }
