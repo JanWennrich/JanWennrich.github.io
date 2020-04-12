@@ -1,6 +1,11 @@
+:root {
+    --avatar-pupil-size: 6px;
+    --avatar-eye-size: 17px;
+}
+
 #avatar-eyes {
     position: absolute;
-    top: 137px;
+    top: 116px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -11,24 +16,24 @@
     position: relative;
     display: inline-block;
     border-radius: 50%;
-    height: 17px;
-    width: 17px;
+    height: var(--avatar-eye-size);
+    width: var(--avatar-eye-size);
     background: #CCC;
-    margin: 0 26px;
+    margin: 0 20px;
 }
+
 .avatar-eye:after { /*pupil*/
     position: absolute;
-    bottom: 8px;
+    bottom: 7px;
     right: 5px;
-    width: 8px;
-    height: 8px;
+    width: var(--avatar-pupil-size);
+    height: var(--avatar-pupil-size);
     background: #000;
     border-radius: 50%;
     content: " ";
 }
 
-
 #avatar-body {
     position: relative;
-    height: 350px;
+    height: 300px;
 }
