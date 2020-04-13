@@ -101,18 +101,11 @@
 						<img src="/images/avatar/eyebrow.png"/>
 					</picture>
 				</div>
-				<div id="avatar-mouth">
+				<div id="avatar-chin">
 					<picture>
-						<source srcset="/images/avatar/mouth.webp" type="image/webp">
-						<source srcset="/images/avatar/mouth.png" type="image/png">
-						<img src="/images/avatar/mouth.png"/>
-					</picture>
-				</div>
-				<div id="avatar-lower-lip">
-					<picture>
-						<source srcset="/images/avatar/lower_lip.webp" type="image/webp">
-						<source srcset="/images/avatar/lower_lip.png" type="image/png">
-						<img src="/images/avatar/lower_lip.png"/>
+						<source srcset="/images/avatar/chin.webp" type="image/webp">
+						<source srcset="/images/avatar/chin.png" type="image/png">
+						<img src="/images/avatar/chin.png"/>
 					</picture>
 				</div>
 				<div id="avatar-body">
@@ -740,27 +733,7 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/typewriter-effect@2.13.0/dist/core.js"></script>
 
-	<script type="text/javascript">
-		var strings = [
-			'Developer',
-			'Project Manager',
-			'Bachelor of Computer Science',
-			'Problem Solver',
-			'Nerd',
-			'Linux Lover',
-			'CLI Connoisseur',
-			'Git Guru'
-		].sort(function() {
-			// Kind of randomizes the array (source: https://stackoverflow.com/a/18650169)
-			return 0.5 - Math.random()
-		});
-
-		new Typewriter('#skills-typewriter', {
-			strings: strings,
-			autoStart: true,
-			loop: true,
-		});
-	</script>
+	<script src="/js/avatar.js" async></script>
 
 	<script type="text/javascript">
 		particlesJS.load('particles-js', '/assets/particlesjs/config_stars.json');

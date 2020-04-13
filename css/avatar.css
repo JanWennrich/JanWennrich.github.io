@@ -52,10 +52,17 @@
 #avatar-left-eyebrow,
 #avatar-right-eyebrow,
 #avatar-lower-lip,
-#avatar-mouth {
+#avatar-chin {
     position: absolute;
     z-index: 5;
     transition: all 250ms linear;
+}
+
+#avatar.is-talking #avatar-left-eyebrow,
+#avatar.is-talking #avatar-right-eyebrow,
+#avatar.is-talking #avatar-lower-lip,
+#avatar.is-talking #avatar-chin {
+    transition: all 150ms linear;
 }
 
 #avatar-left-eyebrow,
@@ -95,19 +102,24 @@ body.is-scrolling #avatar-right-eyebrow {
     z-index: 6;
 }
 
-body.is-scrolling #avatar-lower-lip {
+#avatar-chin {
+    position: absolute;
+    top: 197px;
+    width: 55px;
+    z-index: 6;
+}
+
+body.is-scrolling #avatar-chin {
+    top: 210px;
+    width: 18px;
+}
+
+#avatar.is-talking #avatar-lower-lip {
+    top: 201px;
+    width: 35px;
+}
+
+#avatar.is-talking #avatar-chin {
     top: 205px;
-    width: 28px;
-}
-
-#avatar-mouth {
-    top: 195px;
-    /*width: 48px;*/
-    height: 4px;
-    z-index: 4;
-}
-
-body.is-scrolling #avatar-mouth {
-    width: 58px;
-    height: 20px;
+    width: 32px;
 }
