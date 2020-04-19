@@ -1,0 +1,23 @@
+#ancient-browser-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    background-color: #0b0a14;
+    z-index: 2000;
+    text-align: center;
+}
+
+#ancient-browser-overlay a {
+    color: white;
+    text-decoration: underline;
+}
+
+#ancient-browser-overlay button {
+    color: white;
+}

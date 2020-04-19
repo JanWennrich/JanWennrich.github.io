@@ -51,6 +51,12 @@
 	<!-- Font Awesome-->
 	<link rel="preload" href="/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="/fontawesome/css/all.min.css"></noscript>
+
+	<script type="text/javascript">
+		function isIE11() {
+			return !!window.MSInputMethodContext && !!document.documentMode;
+		}
+	</script>
 </head>
 <body id="page-top" class="politics_version">
     <!-- Navigation -->
@@ -756,6 +762,17 @@
 				}
 			}, 60), {capture: false, passive: true});
 		})();
+	</script>
+
+	<script type="text/javascript" async>
+		if (isIE11()) {
+			var Script = document.createElement('script');
+			Script.type = 'text/javascript';
+			Script.src = '/js/ancientBrowser.js';
+
+			document.body.style.overflow = 'hidden';
+			document.body.appendChild(Script);
+		}
 	</script>
 </body>
 </html>
