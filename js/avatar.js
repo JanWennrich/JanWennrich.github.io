@@ -46,7 +46,10 @@
             'Nerd',
             'Linux Lover',
             'CLI Connoisseur',
-            'Git Guru'
+            'Git Guru',
+            'PHP Professional',
+            'JavaScript Joyrider',
+            'SQL Squire'
         ].sort(element => 0.5 - Math.random());
         // .sort kind of randomizes the array (source: https://stackoverflow.com/a/18650169)
 
