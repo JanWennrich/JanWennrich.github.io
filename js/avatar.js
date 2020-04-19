@@ -3,7 +3,7 @@
         Writer     = new Typewriter('#skills-typewriter', {loop: true}),
         shouldTalk = false;
 
-    function startTalking()
+    async function startTalking()
     {
         shouldTalk = true;
         talk();
@@ -27,7 +27,7 @@
         }, rand);
     }
 
-    function stopTalking()
+    async function stopTalking()
     {
         shouldTalk = false;
         Avatar.classList.remove('is-talking');
@@ -45,27 +45,16 @@
             'Linux Lover',
             'CLI Connoisseur',
             'Git Guru'
-        ].sort(function () {
-            // Kind of randomizes the array (source: https://stackoverflow.com/a/18650169)
-            return 0.5 - Math.random()
-        });
+        ].sort(element => 0.5 - Math.random());
+        // .sort kind of randomizes the array (source: https://stackoverflow.com/a/18650169)
 
-        texts.forEach(function (text) {
-            var words = text.split(' ');
-
-            words.forEach(function (word, index) {
-                if (index < words.length - 1) {
-                    word += ' ';
-                }
-
-                Writer.callFunction(startTalking)
-                    .typeString(word + ' ')
-                    .callFunction(stopTalking)
-                    .start()
-            });
-
-            Writer.pauseFor(500)
-                .deleteAll(45);
+        texts.forEach(text => {
+            Writer.callFunction(startTalking)
+                .typeString(text)
+                .callFunction(stopTalking)
+                .pauseFor(500)
+                .deleteAll(45)
+                .start();
         });
     }
 
