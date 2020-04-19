@@ -1,4 +1,4 @@
-(function () {
+(() => {
     var Avatar     = document.getElementById('avatar'),
         Writer     = new Typewriter('#skills-typewriter', {loop: true}),
         shouldTalk = false;
@@ -14,16 +14,18 @@
         Avatar.classList.add('is-talking');
 
         var rand = Math.round(Math.random() * 100) + 150;
-        setTimeout(function () {
+        setTimeout(() => {
             Avatar.classList.remove('is-talking');
 
-            if (shouldTalk) {
-                setTimeout(function () {
-                    if (shouldTalk) {
-                        talk();
-                    }
-                }, rand);
+            if (!shouldTalk) {
+                return;
             }
+
+            setTimeout(() => {
+                if (shouldTalk) {
+                    talk();
+                }
+            }, rand);
         }, rand);
     }
 

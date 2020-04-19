@@ -1,5 +1,5 @@
 // Wrapped in a closure to prevent global variables
-(function () {
+(() => {
     var NavBar            = document.getElementById('mainNav'),
         NavLinkAbout      = document.getElementById('nav-link-about'),
         NavLinkSkillset   = document.getElementById('nav-link-skillset'),
@@ -120,12 +120,12 @@
         window.clearTimeout(isScrollingTimeout);
 
         // Set a timeout to run after scrolling ends
-        isScrollingTimeout = setTimeout(function () {
+        isScrollingTimeout = setTimeout(() => {
             document.body.classList.remove('is-scrolling');
         }, 300);
     }
 
-    document.addEventListener('scroll', throttle(function () {
+    document.addEventListener('scroll', throttle(() => {
         styleNavbar();
         updateNavLinks();
         fadeoutHomeSection();

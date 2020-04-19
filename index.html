@@ -722,7 +722,7 @@
 				});
 
 			}
-		};
+		}
 	</script>
 
 	<script src="/js/scrollListener.js"></script>
@@ -740,11 +740,11 @@
 	</script>
 
 	<script>
-		(function () {
+		(() => {
 			var HomeSection = document.getElementById('home'),
 				Eyes         = HomeSection.getElementsByClassName('avatar-eye');
 
-			HomeSection.addEventListener('mousemove', throttle(function (event) {
+			HomeSection.addEventListener('mousemove', throttle(event => {
 				 for (var Eye of Eyes) {
 					var eyeBoundingClientRect = Eye.getBoundingClientRect(),
 						x   = (eyeBoundingClientRect.x) + (eyeBoundingClientRect.width / 2),
