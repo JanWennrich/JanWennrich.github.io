@@ -68,6 +68,11 @@ class Stars {
     {
         this.isStopped = true;
     }
+
+    isMoving()
+    {
+        return !this.isStopped;
+    }
 }
 
 
