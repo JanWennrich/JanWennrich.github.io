@@ -140,14 +140,12 @@
         let isMoving = MyStars.isMoving();
 
         if (isScrolledPastHome && isMoving) {
-            console.log('stop');
             MyStars.stopMoving();
 
             return;
         }
 
         if (!isScrolledPastHome && !isMoving) {
-            console.log('start');
             MyStars.startMoving();
         }
     }
