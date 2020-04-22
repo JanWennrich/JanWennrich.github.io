@@ -125,11 +125,39 @@
         }, 300);
     }
 
+    /**
+     * Disables star movement when scrolled past home section to improve performance.
+     * Re-enables it when scrolling to home section.
+     */
+    function toggleStarMovement()
+    {
+        if (typeof MyStars === 'undefined') {
+            return;
+        }
+
+        let isScrolledPastHome = window.scrollY > homeSectionEnd;
+
+        let isMoving = MyStars.isMoving();
+
+        if (isScrolledPastHome && isMoving) {
+            console.log('stop');
+            MyStars.stopMoving();
+
+            return;
+        }
+
+        if (!isScrolledPastHome && !isMoving) {
+            console.log('start');
+            MyStars.startMoving();
+        }
+    }
+
     document.addEventListener('scroll', throttle(() => {
         styleNavbar();
         updateNavLinks();
         fadeoutHomeSection();
         setScrollStatus();
+        toggleStarMovement();
     }, 250), {capture: false, passive: true});
 
     fadeoutHomeSection();
@@ -142,4 +170,6 @@
     // The correct link is the section that's currently in view.
     // This could be something different than home, if the page get's reloaded.
     updateNavLinks();
+
+    toggleStarMovement();
 })();
