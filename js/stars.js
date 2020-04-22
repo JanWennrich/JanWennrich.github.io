@@ -2,66 +2,88 @@
  * Inspired by a codepen from Fur Dworetzky:
  * https://codepen.io/furdworetzky/pen/yNKOBm
  */
-(function () {
-    var Canvas = document.getElementById('stars');
-    var Context = Canvas.getContext('2d');
-    var width = Canvas.width = window.innerWidth;
-    var height = Canvas.height = window.innerHeight;
-    var particleCount = 80;
-    var particles = [];
+class Stars {
+    constructor(Canvas, particleCount)
+    {
+        this.Canvas = Canvas;
+        this.Context = this.Canvas.getContext('2d');
+        this.particleCount = particleCount;
+        this.particles = [];
 
-    function init() {
-        for (var i = 0; i < particleCount; i++) {
-            createParticle();
+        this.width = this.Canvas.width = window.innerWidth;
+        this.height = this.Canvas.height = window.innerHeight;
+
+        for (let i = 0; i < this.particleCount; i++) {
+            this.particles[i] = new Particle(this.getWidth(), this.getHeight());
         }
+
+        this.render();
     }
 
-    function createParticle() {
-        var newParticle = new Particle();
-        newParticle.initialize(true);
-        particles.push(newParticle);
+    getWidth()
+    {
+        return this.width;
     }
 
-    function Particle() {
-        this.initialize = function(isFirstDraw) {
-            this.x = Math.random() * width;
+    getHeight()
+    {
+        return this.height;
+    }
 
-            if (!isFirstDraw) {
-                this.x -= width;
+    render()
+    {
+        this.Context.clearRect(0, 0, this.getWidth(), this.getHeight());
+
+        this.particles.forEach(Particle => {
+            Particle.update()
+
+            if (Particle.isOutOfBounds(this.getWidth())) {
+                Particle.reset(this.getWidth(), this.getHeight());
             }
 
-            this.y = Math.random() * height;
-            this.velocity = Math.random() + 0.75;
-            this.size = 2 + Math.random() * 3;
-        }
+            Particle.draw(this.Context);
+        });
 
-        this.update = async function () {
-            this.x += this.velocity;
-            if (this.isOutOfBounds()) {
-                this.initialize();
-            }
+        requestAnimationFrame(this.render.bind(this));
+    }
+}
 
-            Context.fillRect(this.x, this.y, this.size, this.size);
-            Context.fillStyle = "#b6b6b6";
-        }
 
-        this.isOutOfBounds = function () {
-            return this.x > width;
-        }
+class Particle {
+    constructor(canvasWidth, canvasHeight)
+    {
+        this.reset(canvasWidth, canvasHeight);
+
+        this.x += canvasWidth;
     }
 
-    function render() {
-        Context.clearRect(0, 0, width, height);
-        particles.forEach(particle => particle.update());
-        requestAnimationFrame(render);
+    reset(canvasWidth, canvasHeight)
+    {
+        this.x = Math.random() * canvasWidth - canvasWidth;
+
+        this.y = Math.random() * canvasHeight;
+
+        this.velocity = Math.random() * 0.3;
+        this.size = 2 + Math.random() * 4;
+        this.color = "#b6b6b6";
     }
 
-    window.addEventListener('resize', resize);
-    function resize() {
-        width = Canvas.width = window.innerWidth;
-        height = Canvas.height = window.innerHeight;
+    draw(Context)
+    {
+        Context.fillRect(this.x, this.y, this.size, this.size);
+        Context.fillStyle = this.color;
     }
 
-    init();
-    render();
-})();
+    async update()
+    {
+        this.x += this.velocity;
+    }
+
+    isOutOfBounds(canvasWidth)
+    {
+        return this.x > canvasWidth;
+    }
+}
+
+
+new Stars(document.getElementById('stars'), 80);
