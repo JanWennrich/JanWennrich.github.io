@@ -10,11 +10,17 @@ class Stars {
         this.particleCount = particleCount;
         this.particles = [];
 
+        this.isStopped = false;
+
         this.width = this.Canvas.width = window.innerWidth;
         this.height = this.Canvas.height = window.innerHeight;
 
         for (let i = 0; i < this.particleCount; i++) {
             this.particles[i] = new Particle(this.getWidth(), this.getHeight());
+        }
+
+        if (this.isStopped) {
+            return;
         }
 
         this.render();
@@ -32,6 +38,10 @@ class Stars {
 
     render()
     {
+        if (this.isStopped) {
+            return;
+        }
+
         this.Context.clearRect(0, 0, this.getWidth(), this.getHeight());
 
         this.particles.forEach(Particle => {
@@ -45,6 +55,18 @@ class Stars {
         });
 
         requestAnimationFrame(this.render.bind(this));
+    }
+
+    startMoving()
+    {
+        this.isStopped = false;
+
+        this.render();
+    }
+
+    stopMoving()
+    {
+        this.isStopped = true;
     }
 }
 
@@ -86,4 +108,4 @@ class Particle {
 }
 
 
-new Stars(document.getElementById('stars'), 80);
+var MyStars = new Stars(document.getElementById('stars'), 80);
