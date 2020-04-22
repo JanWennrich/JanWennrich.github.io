@@ -7,7 +7,7 @@
     var Context = Canvas.getContext('2d');
     var width = Canvas.width = window.innerWidth;
     var height = Canvas.height = window.innerHeight;
-    var particleCount = 100;
+    var particleCount = 80;
     var particles = [];
 
     function init() {
@@ -18,39 +18,41 @@
 
     function createParticle() {
         var newParticle = new Particle();
-        newParticle.initialize();
+        newParticle.initialize(true);
         particles.push(newParticle);
     }
 
     function Particle() {
-        this.initialize = function() {
+        this.initialize = function(isFirstDraw) {
             this.x = Math.random() * width;
-            this.y = Math.random() * height + height;
-            this.v = 5 + Math.random() * 5;
-            this.s = 2 + Math.random() * 5;
+
+            if (!isFirstDraw) {
+                this.x -= width;
+            }
+
+            this.y = Math.random() * height;
+            this.velocity = Math.random() + 0.75;
+            this.size = 2 + Math.random() * 3;
         }
 
         this.update = async function () {
-            this.y -= this.v * 0.15;
+            this.x += this.velocity;
             if (this.isOutOfBounds()) {
                 this.initialize();
             }
 
-            Context.fillRect(this.x, this.y, this.s, this.s);
+            Context.fillRect(this.x, this.y, this.size, this.size);
             Context.fillStyle = "#b6b6b6";
-            Context.fill();
         }
 
         this.isOutOfBounds = function () {
-            return ((this.x < 0) || (this.x > width) || (this.y < 0) || (this.y > height));
+            return this.x > width;
         }
     }
 
     function render() {
         Context.clearRect(0, 0, width, height);
-        for (var i = 0; i < particles.length; i++) {
-            particles[i].update();
-        }
+        particles.forEach(particle => particle.update());
         requestAnimationFrame(render);
     }
 
