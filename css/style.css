@@ -285,6 +285,34 @@ button:hover,
 }
 
 
+#about > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about-image {
+    max-width: 350px;
+}
+
+#about-text {
+    max-width: 50%;
+}
+
+#about-text .section-title {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    #about > .container {
+        flex-direction: column;
+    }
+
+    #about-text {
+        max-width: initial;
+    }
+}
+
 .skill-box{
     padding: 15px;
     margin-bottom: 30px;
