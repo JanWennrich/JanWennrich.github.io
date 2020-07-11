@@ -404,6 +404,11 @@ button:hover,
     color: white;
 }
 
+.reference-item-overlay a {
+    color: #56b0ff;
+}
+
+
 
 .reference-item:hover .reference-item-overlay {
     visibility: visible;
