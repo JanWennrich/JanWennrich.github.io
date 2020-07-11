@@ -31,12 +31,7 @@ a {
     transition: all .3s ease-in-out;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0;
     font-weight: normal;
     position: relative;
@@ -46,6 +41,13 @@ h6 {
     color: #333333;
     margin: 0
 }
+
+@media only screen and (max-width: 767px) {
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center;
+    }
+}
+
 
 h1 {
     font-size: 24px
