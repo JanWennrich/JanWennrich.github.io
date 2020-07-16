@@ -561,11 +561,14 @@ footer {
     justify-content: space-evenly;
 }
 
-#footer-socials-links a {
+#footer-socials-links a,
+#footer-socials-links > div {
     color: white;
+    cursor: pointer;
 }
 
-#footer-socials-links a:hover {
+#footer-socials-links a:hover,
+#footer-socials-links > div:hover {
     color: rgba(255,255,255,.5);
 }
 
