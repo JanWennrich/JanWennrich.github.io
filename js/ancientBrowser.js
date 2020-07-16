@@ -1,4 +1,4 @@
-(() => {
+(function() {
     var Overlay = document.createElement('div');
 
     Overlay.className = 'overlay';
