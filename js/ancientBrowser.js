@@ -9,9 +9,9 @@
                         '<p>it seems like you are using an ancient browser.</p>' +
                         '<p>Some functions may not work and the layout might be broken.</p>' +
                         '<p>' +
-                            'You should consider using <a href="https://www.mozilla.org/en-US/firefox/" rel="nofollow noopener">FireFox</a>, ' +
-                            '<a href="https://www.google.com/chrome/" rel="nofollow noopener">Chrome</a> or even ' +
-                            '<a href="https://www.microsoft.com/edge" rel="nofollow noopener">Edge</a>.' +
+                            'You should consider using <a href="https://www.mozilla.org/en-US/firefox/" rel="nofollow noopener" target="_blank">FireFox</a>, ' +
+                            '<a href="https://www.google.com/chrome/" rel="nofollow noopener" target="_blank">Chrome</a> or even ' +
+                            '<a href="https://www.microsoft.com/edge" rel="nofollow noopener" target="_blank">Edge</a>.' +
                         '</p>' +
                         '<p>If you want to look around anyways:</p>' +
                         '<p>'+
