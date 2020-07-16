@@ -323,15 +323,12 @@ button:hover,
 }
 
 
-.item-icon{
-    width: 100%;
-    text-align: center;
-    margin: 30px 0;
+.item-svg {
+    max-width: 250px;
+    height: 200px;
+    margin-bottom: 30px;
 }
-.item-icon i{
-    font-size: 50px;
-    color: #333333;
-}
+
 .skill-box h2{
     font-size: 22px;
     font-weight: 600;
