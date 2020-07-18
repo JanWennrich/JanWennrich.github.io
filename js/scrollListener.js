@@ -18,7 +18,30 @@
     var ReferencesSection      = document.getElementById('references'),
         referencesSectionStart = ReferencesSection.offsetTop - NavBar.offsetHeight;
 
+    var animatedItems = document.getElementsByClassName('animate-in');
+
     var isScrollingTimeout = false;
+
+    function animateElements()
+    {
+        for (let Item of animatedItems) {
+            if (isElementInView(Item, 100)) {
+                Item.classList.add('animate-in-run');
+            }
+        }
+    }
+
+    function isElementInView(Element, offset = 0)
+    {
+        let rect = Element.getBoundingClientRect();
+
+        return (
+            rect.top + offset >= 0 &&
+            rect.left + offset >= 0 &&
+            rect.bottom - offset <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right - offset <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
     /**
      * Adds class "with-background" to the nav bar if the window is scrolled past the Home section.
@@ -156,6 +179,8 @@
         fadeoutHomeSection();
         setScrollStatus();
         toggleStarMovement();
+        animateElements()
+
     }, 250), {capture: false, passive: true});
 
     fadeoutHomeSection();
@@ -170,4 +195,6 @@
     updateNavLinks();
 
     toggleStarMovement();
+
+    animateElements();
 })();
