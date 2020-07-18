@@ -424,6 +424,10 @@ button:hover,
     margin: 0 auto;
 }
 
+#references-extend-button img {
+    width: 12px;
+}
+
 #references-extend-button-show-less-design {
     display: none;
 }
@@ -431,6 +435,11 @@ button:hover,
 #references-extend-button.extended #references-extend-button-show-less-design {
     display: block;
 }
+
+#references-extend-button.extended #references-extend-button-show-less-design img {
+    transform: rotate(180deg);
+}
+
 
 #references-extend-button.extended #references-extend-button-show-more-design {
     display: none;
@@ -497,8 +506,9 @@ div.heading {
     z-index: 1;
 }
 
-#down-button a {
-    color: white;
+#down-button img {
+    width: 50px;
+    filter: invert(1);
 }
 
 
@@ -566,13 +576,25 @@ footer {
 
 #footer-socials-links a,
 #footer-socials-links > div {
-    color: white;
     cursor: pointer;
 }
 
-#footer-socials-links a:hover,
-#footer-socials-links > div:hover {
-    color: rgba(255,255,255,.5);
+#footer-socials-links a:hover img,
+#footer-socials-links > div:hover img {
+    filter: grayscale(1) invert(1) contrast(1) brightness(1)
+}
+
+#footer-socials-links img {
+    height: 30px;
+    filter: grayscale(1) invert(1) contrast(1) brightness(.7)
+}
+
+#social-link-gitlab img {
+    filter: grayscale(1) invert(1) contrast(1.5) brightness(1.1)
+}
+
+#footer-socials-links #social-link-gitlab:hover img {
+    filter: grayscale(1) invert(1) contrast(1.5) brightness(1.4)
 }
 
 /** region bounce animation */

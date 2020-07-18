@@ -48,10 +48,6 @@
     <link rel="stylesheet" href="css/balloon.css">
     <link rel="stylesheet" href="css/avatar.css">
 
-	<!-- Font Awesome-->
-	<link rel="preload" href="/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="/fontawesome/css/all.min.css"></noscript>
-
 	<script type="text/javascript">
 		function isIE11() {
 			return !!window.MSInputMethodContext && !!document.documentMode;
@@ -130,7 +126,9 @@
 			</h2>
 		</div>
 		<div id="down-button">
-			<a href="#about" aria-label="Scroll to about section"><i class="fas fa-chevron-down fa-4x bounce"></i></a>
+			<a href="#about" aria-label="Scroll to about section">
+				<img src="/images/icons/chevron-down.svg" alt="Chevron Down" loading="lazy" class="bounce">
+			</a>
 		</div>
 	</section>
 
@@ -385,12 +383,14 @@
 			<div id="references-extend-button" class="button" role="button">
 				<!-- By adding "extended" class to references-extend-button these two are hidden displayed accordingly -->
 				<div id="references-extend-button-show-more-design">
-					<i class="fas fa-chevron-down"></i><span> Show More References </span><i
-						class="fas fa-chevron-down"></i>
+					<img src="/images/icons/chevron-down.svg" alt="Chevron Down" loading="lazy">
+					<span> Show More References </span>
+					<img src="/images/icons/chevron-down.svg" alt="Chevron Down" loading="lazy">
 				</div>
 				<div id="references-extend-button-show-less-design">
-					<i class="fas fa-chevron-up"></i><span> Show Less References </span><i
-						class="fas fa-chevron-up"></i>
+					<img src="/images/icons/chevron-down.svg" alt="Chevron Up" loading="lazy">
+					<span> Show Less References </span>
+					<img src="/images/icons/chevron-down.svg" alt="Chevron Up" loading="lazy">
 				</div>
 			</div>
 		</div>
@@ -674,19 +674,27 @@
 					<h3>You can also find me on:</h3>
 				</div>
 				<div id="footer-socials-links">
-					<a href="https://dev.quiqqer.com/Panni" target="_blank" rel="noopener"><i class="fab fa-gitlab fa-2x" aria-label="GitLab"></i></a>
-					<a href="https://github.com/JanWennrich" target="_blank" rel="noopener"><i class="fab fa-github fa-2x" aria-label="GitHub"></i></a>
+					<a href="https://dev.quiqqer.com/Panni" target="_blank" rel="noopener" id="social-link-gitlab">
+						<img src="/images/icons/gitlab.svg" alt="GitLab" loading="lazy">
+					</a>
+					<a href="https://github.com/JanWennrich" target="_blank" rel="noopener" id="social-link-github">
+						<img src="/images/icons/github.svg" alt="Github" loading="lazy">
+					</a>
 					<!-- Base64 encoded mail address is decoded on click, to prevent spam-bots from crawling it -->
 					<!-- It's in a div to prevent 'right-click' > 'copy email-address' causing confusion -->
-					<div onclick="window.open(atob('bWFpbHRvOmphbi53ZW5ucmljaEBwY3NnLmRl'), '_blank')" id="email-link"><i class="fas fa-envelope fa-2x" aria-label="E-Mail"></i></div>
-					<a href="https://www.xing.com/profile/Jan_Wennrich" target="_blank" rel="noopener"><i class="fab fa-xing fa-2x" aria-label="XING"></i></a>
-					<a href="https://www.linkedin.com/in/jan-wennrich-a37bbb1a9/" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-2x" aria-label="LinkedIn"></i></a>
+					<div onclick="window.open(atob('bWFpbHRvOmphbi53ZW5ucmljaEBwY3NnLmRl'), '_blank')" id="social-link-email">
+						<img src="/images/icons/email.svg" alt="E-Mail" loading="lazy">
+					</div>
+					<a href="https://www.xing.com/profile/Jan_Wennrich" target="_blank" rel="noopener" id="social-link-xing">
+						<img src="/images/icons/xing.svg" alt="Xing" loading="lazy">
+					</a>
+					<a href="https://www.linkedin.com/in/jan-wennrich-a37bbb1a9/" target="_blank" rel="noopener" id="social-link-linkedin">
+						<img src="/images/icons/linkedin.svg" alt="LinkedIn" loading="lazy">
+					</a>
 				</div>
 			</div>
 		</div>
     </footer>
-
-    <a href="#" id="scroll-to-top" class="dmtop global-radius" aria-label="Scroll to top"><i class="fa fa-angle-up"></i></a>
 
 	<script type="text/javascript">
 		// Returns a function, that, when invoked, will only be triggered at most once
