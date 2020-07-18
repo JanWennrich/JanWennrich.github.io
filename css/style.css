@@ -519,19 +519,14 @@ div.heading {
     height: 100px;
 }
 
-.tool-item-icon i {
-    margin: 0;
-    color: #999999;
-}
-
-.tool-item-icon:hover i {
-    color: #333333;
-}
-
 .tool-item img {
     max-width: 50px;
     max-height: 50px;
     filter: grayscale(1);
+}
+
+.tool-item-dark img {
+    filter: invert(0.3);
 }
 
 .tool-item img:hover {
