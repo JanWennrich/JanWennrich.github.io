@@ -1,7 +1,31 @@
 (() => {
-    var Avatar     = document.getElementById('avatar'),
-        Writer     = new Typewriter('#skills-typewriter', {loop: true}),
-        shouldTalk = false;
+    var Avatar      = document.getElementById('avatar'),
+        Writer      = new TypeWriter('#skills-typewriter', {loop: true}),
+        shouldTalk  = false,
+
+        // Is the typewriter currently typing?
+        isTyping    = false,
+
+        // Texts the typewriter still has to type
+        textsToType = [];
+
+    // Texts the typewriter should type
+    const texts = [
+        'Web Developer',
+        'App Developer',
+        'Software Developer',
+        'Project Manager',
+        'Bachelor of Computer Science',
+        'Problem Solver',
+        'Nerd',
+        'Linux Lover',
+        'CLI Connoisseur',
+        'Git Guru',
+        'PHP Professional',
+        'JavaScript Joyrider',
+        'SQL Squire'
+    ];
+
 
     async function startTalking()
     {
@@ -36,32 +60,32 @@
     }
 
 
-    function run()
+    function talkWords(speed = 100)
     {
-        var texts = [
-            'Developer',
-            'Project Manager',
-            'Bachelor of Computer Science',
-            'Problem Solver',
-            'Nerd',
-            'Linux Lover',
-            'CLI Connoisseur',
-            'Git Guru',
-            'PHP Professional',
-            'JavaScript Joyrider',
-            'SQL Squire'
-        ].sort(element => 0.5 - Math.random());
-        // .sort kind of randomizes the array (source: https://stackoverflow.com/a/18650169)
+        isTyping = true;
 
-        texts.forEach(text => {
-            Writer.callFunction(startTalking)
-                .typeString(text)
-                .callFunction(stopTalking)
-                .pauseFor(500)
-                .deleteAll(45)
-                .start();
-        });
+        if (textsToType.length === 0) {
+            // clone from the default texts
+            textsToType = [...texts];
+
+            // This .sort call kind of randomizes the array (source: https://stackoverflow.com/a/18650169)
+            textsToType.sort(element => 0.5 - Math.random());
+        }
+
+        // Pick a random text to type
+        let text = textsToType.pop();
+
+        Writer.erase(999999, speed / 2)
+            .callBack(startTalking)
+            .write(text, {speed: speed})
+            .callBack(stopTalking)
+            .wait(speed * 7)
+            .callBack(() => {isTyping = false});
     }
 
-    run();
+    setInterval(() => {
+        if (!isTyping) {
+            talkWords();
+        }
+    }, 250);
 })();
