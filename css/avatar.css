@@ -78,7 +78,7 @@ body.is-scrolling #avatar-right-eyebrow {
 
 #avatar-left-eyebrow {
     position: absolute;
-    margin: 0 -30px;
+    left: calc(50% - 50px);
     transform: scaleX(-1);
 }
 
@@ -88,7 +88,7 @@ body.is-scrolling #avatar-left-eyebrow {
 
 #avatar-right-eyebrow {
     position: absolute;
-    margin: 0 30px;
+    right: calc(50% - 50px);
 }
 
 body.is-scrolling #avatar-right-eyebrow {
