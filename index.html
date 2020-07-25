@@ -57,7 +57,7 @@
 <body id="page-top" class="politics_version">
     <!-- Navigation -->
     <nav class="navbar navbar-dark fixed-top" id="mainNav">
-      <div class="container">
+      <header class="container">
         <a class="navbar-brand" href="#page-top">
 			<picture>
 				<source srcset="images/logo.webp" type="image/webp">
@@ -78,586 +78,586 @@
             </li>
           </ul>
         </div>
-      </div>
+      </header>
     </nav>
 
-	<section id="home">
-		<canvas id="stars"></canvas>
-		<div class="heading">
-			<div id="avatar">
-				<div id="avatar-eyes">
-					<div class='avatar-eye'></div>
-					<div class='avatar-eye'></div>
+	<main>
+		<section id="home">
+			<canvas id="stars"></canvas>
+			<div class="heading">
+				<div id="avatar">
+					<div id="avatar-eyes">
+						<div class='avatar-eye'></div>
+						<div class='avatar-eye'></div>
+					</div>
+					<div id="avatar-left-eyebrow">
+						<picture>
+							<source srcset="/images/avatar/eyebrow.webp" type="image/webp">
+							<source srcset="/images/avatar/eyebrow.png" type="image/png">
+							<img src="/images/avatar/eyebrow.png" alt="Talking avatar's left eyebrow"/>
+						</picture>
+					</div>
+					<div id="avatar-right-eyebrow">
+						<picture>
+							<source srcset="/images/avatar/eyebrow.webp" type="image/webp">
+							<source srcset="/images/avatar/eyebrow.png" type="image/png">
+							<img src="/images/avatar/eyebrow.png" alt="Talking avatar's right eyebrow"/>
+						</picture>
+					</div>
+					<div id="avatar-chin">
+						<picture>
+							<source srcset="/images/avatar/chin.webp" type="image/webp">
+							<source srcset="/images/avatar/chin.png" type="image/png">
+							<img src="/images/avatar/chin.png" alt="Talking avatar's chin"/>
+						</picture>
+					</div>
+					<div id="avatar-body">
+						<picture>
+							<source srcset="/images/avatar/avatar_blank.webp" type="image/webp">
+							<source srcset="/images/avatar/avatar_blank.png" type="image/png">
+							<img src="/images/avatar/avatar_blank.png" alt="Talking avatar's body"/>
+						</picture>
+					</div>
 				</div>
-				<div id="avatar-left-eyebrow">
-					<picture>
-						<source srcset="/images/avatar/eyebrow.webp" type="image/webp">
-						<source srcset="/images/avatar/eyebrow.png" type="image/png">
-						<img src="/images/avatar/eyebrow.png" alt="Talking avatar's left eyebrow"/>
-					</picture>
+				<p>My name is Jan and in <span id="age">more than 20</span> years I became a:</p>
+				<script>/* calculate age: */ document.getElementById('age').innerText = Math.floor((new Date() - new Date('1997-04-06').getTime()) / 3.15576e+10).toString()</script>
+				<h2 id="skills-typewriter" class="cd-headline clip is-full-width">
+					Software Developer
+					<!-- This is filled via JS-->
+				</h2>
+			</div>
+			<div id="down-button">
+				<a href="#about" aria-label="Scroll to about section">
+					<img src="/images/icons/chevron-down.svg" alt="Chevron Down" loading="lazy" class="bounce">
+				</a>
+			</div>
+		</section>
+
+		<section id="about" class="section lb">
+			<div class="container">
+				<div id="about-text">
+					<div class="section-title">
+						<h3>About Me</h3>
+					</div>
+					<p>Programming Minecraft mods and plugins at an age of 14, I slid into the world of programming.</p>
+					<p>
+						While studying computer science at <a href="https://www.h-brs.de/en" rel="noopener" target="_blank">Hochschule Bonn-Rhein-Sieg</a>, I began to work as a full-stack web-developer at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>.
+						This job brought me a lot of field experience that complements the theoretical knowledge of my bachelor's studies.
+						Before receiving my bachelor's degree, I was already a full-fledged web developer.
+					</p>
+					<p>
+						By now I'm studying for my master's degree in computer science at <a href="https://www.fernuni-hagen.de/english/" rel="noopener" target="_blank">FernUniversität in Hagen</a> and still work for <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>. But besides plain programming I also conceptualize, plan and manage large projects for customers.
+					</p>
 				</div>
-				<div id="avatar-right-eyebrow">
+
+				<div id="about-image">
 					<picture>
-						<source srcset="/images/avatar/eyebrow.webp" type="image/webp">
-						<source srcset="/images/avatar/eyebrow.png" type="image/png">
-						<img src="/images/avatar/eyebrow.png" alt="Talking avatar's right eyebrow"/>
-					</picture>
-				</div>
-				<div id="avatar-chin">
-					<picture>
-						<source srcset="/images/avatar/chin.webp" type="image/webp">
-						<source srcset="/images/avatar/chin.png" type="image/png">
-						<img src="/images/avatar/chin.png" alt="Talking avatar's chin"/>
-					</picture>
-				</div>
-				<div id="avatar-body">
-					<picture>
-						<source srcset="/images/avatar/avatar_blank.webp" type="image/webp">
-						<source srcset="/images/avatar/avatar_blank.png" type="image/png">
-						<img src="/images/avatar/avatar_blank.png" alt="Talking avatar's body"/>
+						<source srcset="/images/devrant_avatar.webp" type="image/webp">
+						<source srcset="/images/devrant_avatar.png" type="image/png">
+						<img src="/images/devrant_avatar.png" alt="Avatar Image" class="img-fluid animate-in slide-from-right" loading="lazy">
 					</picture>
 				</div>
 			</div>
-			<p>My name is Jan and in <span id="age">more than 20</span> years I became a:</p>
-			<script>/* calculate age: */ document.getElementById('age').innerText = Math.floor((new Date() - new Date('1997-04-06').getTime()) / 3.15576e+10).toString()</script>
-			<h2 id="skills-typewriter" class="cd-headline clip is-full-width">
-				Software Developer
-				<!-- This is filled via JS-->
-			</h2>
-		</div>
-		<div id="down-button">
-			<a href="#about" aria-label="Scroll to about section">
-				<img src="/images/icons/chevron-down.svg" alt="Chevron Down" loading="lazy" class="bounce">
-			</a>
-		</div>
-	</section>
+		</section>
 
-    <section id="about" class="section lb">
-        <div class="container">
-			<div id="about-text">
-				<div class="section-title">
-					<h3>About Me</h3>
+		<section id="skillset" class="section wb">
+			<div class="container">
+				<div class="section-title text-left">
+					<h3>Skillset</h3>
+					<p>These are the most outstanding skills I mastered over time and use every day at work:</p>
 				</div>
-				<p>Programming Minecraft mods and plugins at an age of 14, I slid into the world of programming.</p>
-				<p>
-					While studying computer science at <a href="https://www.h-brs.de/en" rel="noopener" target="_blank">Hochschule Bonn-Rhein-Sieg</a>, I began to work as a full-stack web-developer at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>.
-					This job brought me a lot of field experience that complements the theoretical knowledge of my bachelor's studies.
-					Before receiving my bachelor's degree, I was already a full-fledged web developer.
+
+				<div id="skills-wrapper" class="item-listing">
+					<div class="item skill-box animate-in slide-from-left">
+						<img src="/images/svgs/web_development.min.svg" class="item-svg" alt="Web Development Illustration" loading="lazy">
+						<h2>Web Development</h2>
+						<p>Planning and programming websites from small landing pages to large shops with a variety of sytems and technologies.</p>
+					</div>
+
+					<div class="item skill-box animate-in slide-from-left">
+						<img src="/images/svgs/project_management.min.svg" class="item-svg" loading="lazy">
+						<h2>Project Management</h2>
+						<p>Ensuring customer satisfaction, activity & resource planning, estimating costs and controlling time management on a daily basis.</p>
+					</div>
+
+					<div class="item skill-box animate-in slide-from-left">
+						<img src="/images/svgs/app_development.min.svg" class="item-svg" loading="lazy">
+						<h2>App Development</h2>
+						<p>Designing and developing native or hybrid mobile apps for Android and iOS. Primarily by using <a href="https://ionicframework.com/" rel="noopener" target="_blank">Ionic Framework</a> or <a href="https://flutter.dev/" rel="noopener" target="_blank">Flutter</a>.</p>
+					</div>
+
+					<div class="item skill-box animate-in slide-from-left">
+						<img src="/images/svgs/problem_solving.min.svg" class="item-svg" loading="lazy">
+						<h2>Problem Solving</h2>
+						<p>Identifying and abstracting problems, analyzing the current and target state, making a plan, executing it and evaluating the result.</p>
+					</div>
+
+					<div class="item skill-box animate-in slide-from-left">
+						<img src="/images/svgs/server_management.min.svg" class="item-svg" loading="lazy">
+						<h2>Server Management</h2>
+						<p>Setting up and updating Linux servers, optimization and tuning of webservers and databases to prevent down-times.</p>
+					</div>
+
+					<div class="item skill-box animate-in slide-from-left">
+						<img src="/images/svgs/seo.min.svg" class="item-svg" loading="lazy">
+						<h2>SEO & SEM</h2>
+						<p>Analyzing and improving a website's content to increase the visibility in search results, which leads to better quality and quantity of traffic.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="references" class="section lb">
+			<div class="container">
+				<div class="section-title text-left">
+					<h3>References</h3>
+					<p>The following are projects I worked on. Click/Tap on a card for further information.</p>
+				</div>
+
+				<div id="references-wrapper" class="item-listing">
+					<div id="reference-item-hkl" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							Project management and development of the following websites:
+							<ul>
+								<li><a href="https://www.hkl-baumaschinen.de/" rel="noopener" target="_blank">HKL-Baumaschinen (Drupal CMS)</a></li>
+								<li><a href="https://www.hkl-baushop.de/" rel="noopener" target="_blank">HKL-Baushop (OXID eShop)</a></li>
+								<li><a href="https://www.hkl-used.com/" rel="noopener" target="_blank">HKL-Used (QUIQQER CMS)</a></li>
+							</ul>
+							<br>
+							The websites allow the rental and purchase of construction machinery and equipment.
+						</div>
+						<picture>
+							<source srcset="/images/references/hkl/logos/logo_resized.webp" type="image/webp">
+							<source srcset="/images/references/hkl/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/hkl/logos/logo_resized.png" alt="HKL Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-quiqqer" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.quiqqer.com/" rel="noopener" target="_blank">QUIQQER</a> is a flexible content management system developed by <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>. It's a fast and easy way to realize complex projects and the backbone of many websites and shops</p>
+							<p>I helped building it from the ground up by writing extensions, fixing bugs and lots of testing.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/quiqqer/logos/logo_big_resized.webp" type="image/webp">
+							<source srcset="/images/references/quiqqer/logos/logo_big_resized.png" type="image/png">
+							<img src="/images/references/quiqqer/logos/logo_big_resized.png" alt="QUIQQER Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-bauforum" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.bauforum24.biz/" rel="noopener" target="_blank">Bauforum24.biz</a> is one of the leading communities for construction(-machinery).</p>
+							<p>It's based on the <a href="https://invisioncommunity.com/" rel="noopener" target="_blank">Invision Community Platform</a>. I was responsible for a major software upgrade, a complete rework of the theme and the integration of a video-portal into the site.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/bauforum/logos/logo_big_resized.webp" type="image/webp">
+							<source srcset="/images/references/bauforum/logos/logo_big_resized.png" type="image/png">
+							<img src="/images/references/bauforum/logos/logo_big_resized.png" alt="Bauforum24 Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-sequry" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.sequry.io/" rel="noopener" target="_blank">Sequry</a> is a password manager developed by <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>. It's main feature and unique selling point is the sharing of passwords with other users and groups.</p>
+							<p>In my bachelor thesis I searched, found and resolved <a href="https://dev.quiqqer.com/groups/sequry/-/issues?scope=all&utf8=%E2%9C%93&state=all&search=SVE" target="_blank" rel="noopener">security flaws of Sequry</a>.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/sequry/logos/logo_resized.webp" type="image/webp">
+							<source srcset="/images/references/sequry/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/sequry/logos/logo_resized.png" alt="Sequry Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-nerdspot" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.nerdspot.events/" rel="noopener" target="_blank">NerdSpot</a> is a calendar/tool that informs about nerdy events of the current day.</p>
+							<p>I helped develop it's calendar features as part of a hackathon at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/nerdspot/logos/logo_resized.webp" type="image/webp">
+							<source srcset="/images/references/nerdspot/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/nerdspot/logos/logo_resized.png" alt="Nerdspot Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-bdwb" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.baudieweltbesser.de/" rel="noopener" target="_blank">BauDieWeltBesser.de</a> is a landing page for the 50th anniversary of HKL-Baumaschinen.</p>
+							<p>Planning the project's costs and time expenditure as well as the coordination of the customer's needs, the design-agency and the developers were my tasks.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/bau_die_welt_besser/logos/logo_resized.webp"
+									type="image/webp">
+							<source srcset="/images/references/bau_die_welt_besser/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/bau_die_welt_besser/logos/logo_resized.png" alt="Bau die Welt besser Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-steempunk" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.steempunk.net/" rel="noopener" target="_blank">STEEMPUNK-NET</a> was a MMORPG based on the <a href="https://steem.com/" rel="noopener" target="_blank">Steem blockchain</a> that could be played in the browser.</p>
+							<p>I helped develop the game as part of a hackathon at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/steempunk/logos/logo_resized.webp" type="image/webp">
+							<source srcset="/images/references/steempunk/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/steempunk/logos/logo_resized.png" alt="Steempunk Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-spl" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://startup-promotion-list.quiqqer.com/" rel="noopener" target="_blank">Startup Promotion List</a> is an iOS and Android app based on the <a href="https://ionicframework.com/" rel="noopener" target="_blank">Ionic Framework</a>. It shows sites that can be used to promote products and helps tracking which sites were already used.</p>
+							<p>Based on an intern's project I re-wrote and -designed the entire app.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/startup_promotion_list/logos/logo_resized.webp"
+									type="image/webp">
+							<source srcset="/images/references/startup_promotion_list/logos/logo_resized.png"
+									type="image/png">
+							<img src="/images/references/startup_promotion_list/logos/logo_resized.png" alt="Startup Promotion List Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-candyman" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.candyman-gmbh.de/" rel="noopener" target="_blank">Candyman</a> is a webshop for food- and gastronomy-equipment based on <a href="https://www.quiqqer.com/" rel="noopener" target="_blank">QUIQQER</a>.</p>
+							<p>I helped to plan and manage the migration from an old version of <a href="https://www.xt-commerce.com/" rel="noopener" target="_blank">xt:Commerce</a> to <a href="https://www.quiqqer.com/" rel="noopener" target="_blank">QUIQQER</a>.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/candyman/logos/logo_resized.webp" type="image/webp">
+							<source srcset="/images/references/candyman/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/candyman/logos/logo_resized.png" alt="Candyman Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-nexgam" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.nexgam.de/" rel="noopener" target="_blank">neXGam</a> is a blog and forum about old and modern video games based on the <a href="https://www.woltlab.com/?l=2" rel="noopener" target="_blank">WoltLab Suite</a>.</p>
+							<p>A major upgrade of the forum software and a rework of the design were done by me.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/nexgam/logos/logo_resized.webp" type="image/webp">
+							<source srcset="/images/references/nexgam/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/nexgam/logos/logo_resized.png" alt="neXgam Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-iban-test" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.iban-test.de/" rel="noopener" target="_blank">IBAN-Test</a> is a website and API to validate and generate <a href="https://en.wikipedia.org/wiki/International_Bank_Account_Number" rel="noopener" target="_blank">IBANs</a>.</p>
+							<p>It was one of my first projects at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a> where I build and designed it from scratch. As an intern is porting it now to <a href="https://www.quiqqer.com/" rel="noopener" target="_blank">QUIQQER</a> I act as an instructor.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/iban_test/logos/logo_resized.webp" type="image/webp">
+							<source srcset="/images/references/iban_test/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/iban_test/logos/logo_resized.png" alt="IBAN-Test Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="reference-item-myelisting" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.my-elisting.com/" rel="noopener" target="_blank">my.eListing</a> is a website that generates embeddable sliders with images and information of an eBay user's auctions.</p>
+							<p>This was my first project at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a> where I helped extend the site with more modern sliders.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/myelisting/logos/logo_resized.webp" type="image/webp">
+							<source srcset="/images/references/myelisting/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/myelisting/logos/logo_resized.png" alt="my.eListing Logo" loading="lazy">
+						</picture>
+					</div>
+
+
+					<div id="reference-item-passdora" class="reference-item item animate-in grow">
+						<div class="reference-item-overlay">
+							<p><a href="https://www.passdora.de/" rel="noopener" target="_blank">Passdora</a> is a small ready-out-of-the-box on-premise server hosting <a href="https://www.sequry.io/" rel="noopener" target="_blank">Sequry</a>.</p>
+							<p>During an internship, I designed, build, configured, developed and tested the system based on a <a href="https://www.raspberrypi.org/" rel="noopener" target="_blank">Raspberry Pi</a>.</p>
+						</div>
+						<picture>
+							<source srcset="/images/references/passdora/logos/logo_resized.webp" type="image/webp">
+							<source srcset="/images/references/passdora/logos/logo_resized.png" type="image/png">
+							<img src="/images/references/passdora/logos/logo_resized.png" alt="Passdora Logo" loading="lazy">
+						</picture>
+					</div>
+				</div>
+				<div id="references-extend-button" class="button" role="button">
+					<!-- By adding "extended" class to references-extend-button these two are hidden displayed accordingly -->
+					<div id="references-extend-button-show-more-design">
+						<img src="/images/icons/chevron-down.svg" alt="Chevron Down" loading="lazy">
+						<span> Show More References </span>
+						<img src="/images/icons/chevron-down.svg" alt="Chevron Down" loading="lazy">
+					</div>
+					<div id="references-extend-button-show-less-design">
+						<img src="/images/icons/chevron-down.svg" alt="Chevron Up" loading="lazy">
+						<span> Show Less References </span>
+						<img src="/images/icons/chevron-down.svg" alt="Chevron Up" loading="lazy">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="tools" class="section wb">
+			<div class="container">
+				<div class="section-title text-left">
+					<h3>Tools</h3>
+					<p>Here are some programs, tools and programming languages that I mastered and use on a regular basis:</p>
+				</div>
+
+				<div id="tools-wrapper" class="item-listing">
+					<div id="tool-item-angular" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Angular" style="--balloon-color: #e13338">
+							<img alt="Angular" src="/images/tools/angular.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-terminal" class="item tool-item tool-item-dark">
+						<picture data-balloon-pos="down" aria-label="Terminal" style="--balloon-color: #020202">
+							<img alt="Bash/Terminal" src="/images/tools/terminal.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-bootstrap" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Bootstrap" style="--balloon-color: #563D7C">
+							<source srcset="/images/tools/bootstrap.webp" type="image/webp">
+							<source srcset="/images/tools/bootstrap.png" type="image/png">
+							<img src="/images/tools/bootstrap.png" alt="bootstrap Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-chrome" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Chrome" style="--balloon-color: #0F9D58">
+							<source srcset="/images/tools/chrome.webp" type="image/webp">
+							<source srcset="/images/tools/chrome.png" type="image/png">
+							<img src="/images/tools/chrome.png" alt="chrome Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-css" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="CSS" style="--balloon-color: #1672b6">
+							<img alt="CSS" src="/images/tools/css.svg" style="height: 50px"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-docker" class="item tool-item" style="--balloon-color: #2496ED">
+						<picture data-balloon-pos="down" aria-label="Docker">
+							<source srcset="/images/tools/docker.webp" type="image/webp">
+							<source srcset="/images/tools/docker.png" type="image/png">
+							<img src="/images/tools/docker.png" alt="docker Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-drupal" class="item tool-item" style="--balloon-color: #077AC0">
+						<picture data-balloon-pos="down" aria-label="Drupal">
+							<source srcset="/images/tools/drupal.webp" type="image/webp">
+							<source srcset="/images/tools/drupal.png" type="image/png">
+							<img src="/images/tools/drupal.png" alt="drupal Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-ebay" class="item tool-item" style="--balloon-color: #F5AF02">
+						<picture data-balloon-pos="down" aria-label="eBay">
+							<img alt="eBay" src="/images/tools/ebay.svg" />
+						</picture>
+					</div>
+
+					<div id="tool-item-facebook" class="item tool-item" style="--balloon-color: #1877F2">
+						<picture data-balloon-pos="down" aria-label="Facebook">
+							<source srcset="/images/tools/facebook.webp" type="image/webp">
+							<source srcset="/images/tools/facebook.png" type="image/png">
+							<img src="/images/tools/facebook.png" alt="facebook Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-fontawesome" class="item tool-item" style="--balloon-color: #228AE6">
+						<picture data-balloon-pos="down" aria-label="FontAwesome">
+							<img alt="FontAwesome" src="/images/tools/fontawesome.svg" />
+						</picture>
+					</div>
+
+					<div id="tool-item-git" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="git" style="--balloon-color: #F05033">
+							<img alt="git" src="/images/tools/git.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-github" class="item tool-item tool-item-dark">
+						<picture data-balloon-pos="down" aria-label="GitHub" style="--balloon-color: #010101">
+							<img alt="GitHub" src="/images/tools/github.svg" style="height: 50px"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-gitlab" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="GitLab" style="--balloon-color: #E24329">
+							<img alt="GitLab" src="/images/tools/gitlab.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-google" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Google" style="--balloon-color: #34A853">
+							<img alt="Google" src="/images/tools/google.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-html" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="HTML" style="--balloon-color: #E44D26">
+							<img alt="HTML" src="/images/tools/html.svg" style="height: 50px"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-javascript" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="JavaScript" style="--balloon-color: #D6BE00">
+							<img alt="JavaScript" src="/images/tools/javascript.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-linux" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Linux" style="--balloon-color: #F5BD0C">
+							<source srcset="/images/tools/linux.webp" type="image/webp">
+							<source srcset="/images/tools/linux.png" type="image/png">
+							<img src="/images/tools/linux.png" alt="linux Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-markdown" class="item tool-item tool-item-dark">
+						<picture data-balloon-pos="down" aria-label="Markdown" style="--balloon-color: #000000">
+							<img alt="Markdown" src="/images/tools/markdown.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-mysql" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="MySQL" style="--balloon-color: #F29213">
+							<source srcset="/images/tools/mysql.webp" type="image/webp">
+							<source srcset="/images/tools/mysql.png" type="image/png">
+							<img src="/images/tools/mysql.png" alt="mysql Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-npm" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="npm" style="--balloon-color: #CB3837">
+							<img alt="npm" src="/images/tools/npm.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-php" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="PHP" style="--balloon-color: #8993BE">
+							<img alt="PHP" src="/images/tools/php.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-python" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Python" style="--balloon-color: #FFD849; --balloon-font-color: #3775A9">
+							<img alt="Python" src="/images/tools/python.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-raspberry-pi" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Raspberry Pi" style="--balloon-color: #BC1142">
+							<source srcset="/images/tools/raspberry-pi.webp" type="image/webp">
+							<source srcset="/images/tools/raspberry-pi.png" type="image/png">
+							<img src="/images/tools/raspberry-pi.png" alt="raspberry-pi Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-sass" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Sass" style="--balloon-color: #CD6799">
+							<source srcset="/images/tools/sass.webp" type="image/webp">
+							<source srcset="/images/tools/sass.png" type="image/png">
+							<img src="/images/tools/sass.png" alt="sass Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-stackoverflow" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Stack Overflow" style="--balloon-color: #919191">
+							<img alt="Stack Overflow" src="/images/tools/stackoverflow.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-twitter" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Twitter" style="--balloon-color: #1DA1F2">
+							<source srcset="/images/tools/twitter.webp" type="image/webp">
+							<source srcset="/images/tools/twitter.png" type="image/png">
+							<img src="/images/tools/twitter.png" alt="twitter Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-windows" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Windows" style="--balloon-color: #01ADEE">
+							<img alt="Windows" src="/images/tools/windows.svg"/>
+						</picture>
+					</div>
+
+					<div id="tool-item-quiqqer" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="QUIQQER" style="--balloon-color: #75B947">
+							<source srcset="/images/tools/quiqqer.webp" type="image/webp">
+							<source srcset="/images/tools/quiqqer.png" type="image/png">
+							<img src="/images/tools/quiqqer.png" alt="QUIQQER Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-ionic" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Ionic" style="--balloon-color: #478AFF">
+							<source srcset="/images/tools/ionic.webp" type="image/webp">
+							<source srcset="/images/tools/ionic.png" type="image/png">
+							<img src="/images/tools/ionic.png" alt="Ionic Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-phpstorm" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="PhpStorm" style="--balloon-color: #A548F0">
+							<source srcset="/images/tools/phpstorm.webp" type="image/webp">
+							<source srcset="/images/tools/phpstorm.png" type="image/png">
+							<img src="/images/tools/phpstorm.png" alt="PhpStorm Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-composer" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Composer" style="--balloon-color: #53422E">
+							<source srcset="/images/tools/composer.webp" type="image/webp">
+							<source srcset="/images/tools/composer.png" type="image/png">
+							<img src="/images/tools/composer.png" alt="Composer Logo" loading="lazy">
+						</picture>
+					</div>
+
+					<div id="tool-item-kubuntu" class="item tool-item">
+						<picture data-balloon-pos="down" aria-label="Kubuntu" style="--balloon-color: #0079C1">
+							<source srcset="/images/tools/kubuntu.webp" type="image/webp">
+							<source srcset="/images/tools/kubuntu.png" type="image/png">
+							<img src="/images/tools/kubuntu.png" alt="Kubuntu Logo" loading="lazy">
+						</picture>
+					</div>
+				</div>
+
+				<p id="tools-text">
+					And probably some more&hellip;
 				</p>
-				<p>
-					By now I'm studying for my master's degree in computer science at <a href="https://www.fernuni-hagen.de/english/" rel="noopener" target="_blank">FernUniversität in Hagen</a> and still work for <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>. But besides plain programming I also conceptualize, plan and manage large projects for customers.
-				</p>
 			</div>
-
-			<div id="about-image">
-				<picture>
-					<source srcset="/images/devrant_avatar.webp" type="image/webp">
-					<source srcset="/images/devrant_avatar.png" type="image/png">
-					<img src="/images/devrant_avatar.png" alt="Avatar Image" class="img-fluid animate-in slide-from-right" loading="lazy">
-				</picture>
-			</div>
-		</div>
-    </section>
-
-    <section id="skillset" class="section wb">
-        <div class="container">
-            <div class="section-title text-left">
-                <h3>Skillset</h3>
-                <p>These are the most outstanding skills I mastered over time and use every day at work:</p>
-            </div>
-
-            <div id="skills-wrapper" class="item-listing">
-				<div class="item skill-box animate-in slide-from-left">
-					<img src="/images/svgs/web_development.min.svg" class="item-svg" alt="Web Development Illustration" loading="lazy">
-					<h2>Web Development</h2>
-					<p>Planning and programming websites from small landing pages to large shops with a variety of sytems and technologies.</p>
-				</div>
-
-				<div class="item skill-box animate-in slide-from-left">
-					<img src="/images/svgs/project_management.min.svg" class="item-svg" loading="lazy">
-					<h2>Project Management</h2>
-					<p>Ensuring customer satisfaction, activity & resource planning, estimating costs and controlling time management on a daily basis.</p>
-				</div>
-
-				<div class="item skill-box animate-in slide-from-left">
-					<img src="/images/svgs/app_development.min.svg" class="item-svg" loading="lazy">
-					<h2>App Development</h2>
-					<p>Designing and developing native or hybrid mobile apps for Android and iOS. Primarily by using <a href="https://ionicframework.com/" rel="noopener" target="_blank">Ionic Framework</a> or <a href="https://flutter.dev/" rel="noopener" target="_blank">Flutter</a>.</p>
-				</div>
-
-				<div class="item skill-box animate-in slide-from-left">
-					<img src="/images/svgs/problem_solving.min.svg" class="item-svg" loading="lazy">
-					<h2>Problem Solving</h2>
-					<p>Identifying and abstracting problems, analyzing the current and target state, making a plan, executing it and evaluating the result.</p>
-				</div>
-
-				<div class="item skill-box animate-in slide-from-left">
-					<img src="/images/svgs/server_management.min.svg" class="item-svg" loading="lazy">
-					<h2>Server Management</h2>
-					<p>Setting up and updating Linux servers, optimization and tuning of webservers and databases to prevent down-times.</p>
-				</div>
-
-				<div class="item skill-box animate-in slide-from-left">
-					<img src="/images/svgs/seo.min.svg" class="item-svg" loading="lazy">
-					<h2>SEO & SEM</h2>
-					<p>Analyzing and improving a website's content to increase the visibility in search results, which leads to better quality and quantity of traffic.</p>
-				</div>
-            </div>
-        </div>
-    </section>
-
-	<section id="references" class="section lb">
-		<div class="container">
-			<div class="section-title text-left">
-				<h3>References</h3>
-				<p>The following are projects I worked on. Click/Tap on a card for further information.</p>
-			</div>
-
-			<div id="references-wrapper" class="item-listing">
-				<div id="reference-item-hkl" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						Project management and development of the following websites:
-						<ul>
-							<li><a href="https://www.hkl-baumaschinen.de/" rel="noopener" target="_blank">HKL-Baumaschinen (Drupal CMS)</a></li>
-							<li><a href="https://www.hkl-baushop.de/" rel="noopener" target="_blank">HKL-Baushop (OXID eShop)</a></li>
-							<li><a href="https://www.hkl-used.com/" rel="noopener" target="_blank">HKL-Used (QUIQQER CMS)</a></li>
-						</ul>
-						<br>
-						The websites allow the rental and purchase of construction machinery and equipment.
-					</div>
-					<picture>
-						<source srcset="/images/references/hkl/logos/logo_resized.webp" type="image/webp">
-						<source srcset="/images/references/hkl/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/hkl/logos/logo_resized.png" alt="HKL Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-quiqqer" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.quiqqer.com/" rel="noopener" target="_blank">QUIQQER</a> is a flexible content management system developed by <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>. It's a fast and easy way to realize complex projects and the backbone of many websites and shops</p>
-						<p>I helped building it from the ground up by writing extensions, fixing bugs and lots of testing.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/quiqqer/logos/logo_big_resized.webp" type="image/webp">
-						<source srcset="/images/references/quiqqer/logos/logo_big_resized.png" type="image/png">
-						<img src="/images/references/quiqqer/logos/logo_big_resized.png" alt="QUIQQER Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-bauforum" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.bauforum24.biz/" rel="noopener" target="_blank">Bauforum24.biz</a> is one of the leading communities for construction(-machinery).</p>
-						<p>It's based on the <a href="https://invisioncommunity.com/" rel="noopener" target="_blank">Invision Community Platform</a>. I was responsible for a major software upgrade, a complete rework of the theme and the integration of a video-portal into the site.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/bauforum/logos/logo_big_resized.webp" type="image/webp">
-						<source srcset="/images/references/bauforum/logos/logo_big_resized.png" type="image/png">
-						<img src="/images/references/bauforum/logos/logo_big_resized.png" alt="Bauforum24 Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-sequry" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.sequry.io/" rel="noopener" target="_blank">Sequry</a> is a password manager developed by <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>. It's main feature and unique selling point is the sharing of passwords with other users and groups.</p>
-						<p>In my bachelor thesis I searched, found and resolved <a href="https://dev.quiqqer.com/groups/sequry/-/issues?scope=all&utf8=%E2%9C%93&state=all&search=SVE" target="_blank" rel="noopener">security flaws of Sequry</a>.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/sequry/logos/logo_resized.webp" type="image/webp">
-						<source srcset="/images/references/sequry/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/sequry/logos/logo_resized.png" alt="Sequry Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-nerdspot" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.nerdspot.events/" rel="noopener" target="_blank">NerdSpot</a> is a calendar/tool that informs about nerdy events of the current day.</p>
-						<p>I helped develop it's calendar features as part of a hackathon at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/nerdspot/logos/logo_resized.webp" type="image/webp">
-						<source srcset="/images/references/nerdspot/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/nerdspot/logos/logo_resized.png" alt="Nerdspot Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-bdwb" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.baudieweltbesser.de/" rel="noopener" target="_blank">BauDieWeltBesser.de</a> is a landing page for the 50th anniversary of HKL-Baumaschinen.</p>
-						<p>Planning the project's costs and time expenditure as well as the coordination of the customer's needs, the design-agency and the developers were my tasks.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/bau_die_welt_besser/logos/logo_resized.webp"
-								type="image/webp">
-						<source srcset="/images/references/bau_die_welt_besser/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/bau_die_welt_besser/logos/logo_resized.png" alt="Bau die Welt besser Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-steempunk" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.steempunk.net/" rel="noopener" target="_blank">STEEMPUNK-NET</a> was a MMORPG based on the <a href="https://steem.com/" rel="noopener" target="_blank">Steem blockchain</a> that could be played in the browser.</p>
-						<p>I helped develop the game as part of a hackathon at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a>.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/steempunk/logos/logo_resized.webp" type="image/webp">
-						<source srcset="/images/references/steempunk/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/steempunk/logos/logo_resized.png" alt="Steempunk Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-spl" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://startup-promotion-list.quiqqer.com/" rel="noopener" target="_blank">Startup Promotion List</a> is an iOS and Android app based on the <a href="https://ionicframework.com/" rel="noopener" target="_blank">Ionic Framework</a>. It shows sites that can be used to promote products and helps tracking which sites were already used.</p>
-						<p>Based on an intern's project I re-wrote and -designed the entire app.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/startup_promotion_list/logos/logo_resized.webp"
-								type="image/webp">
-						<source srcset="/images/references/startup_promotion_list/logos/logo_resized.png"
-								type="image/png">
-						<img src="/images/references/startup_promotion_list/logos/logo_resized.png" alt="Startup Promotion List Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-candyman" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.candyman-gmbh.de/" rel="noopener" target="_blank">Candyman</a> is a webshop for food- and gastronomy-equipment based on <a href="https://www.quiqqer.com/" rel="noopener" target="_blank">QUIQQER</a>.</p>
-						<p>I helped to plan and manage the migration from an old version of <a href="https://www.xt-commerce.com/" rel="noopener" target="_blank">xt:Commerce</a> to <a href="https://www.quiqqer.com/" rel="noopener" target="_blank">QUIQQER</a>.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/candyman/logos/logo_resized.webp" type="image/webp">
-						<source srcset="/images/references/candyman/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/candyman/logos/logo_resized.png" alt="Candyman Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-nexgam" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.nexgam.de/" rel="noopener" target="_blank">neXGam</a> is a blog and forum about old and modern video games based on the <a href="https://www.woltlab.com/?l=2" rel="noopener" target="_blank">WoltLab Suite</a>.</p>
-						<p>A major upgrade of the forum software and a rework of the design were done by me.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/nexgam/logos/logo_resized.webp" type="image/webp">
-						<source srcset="/images/references/nexgam/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/nexgam/logos/logo_resized.png" alt="neXgam Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-iban-test" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.iban-test.de/" rel="noopener" target="_blank">IBAN-Test</a> is a website and API to validate and generate <a href="https://en.wikipedia.org/wiki/International_Bank_Account_Number" rel="noopener" target="_blank">IBANs</a>.</p>
-						<p>It was one of my first projects at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a> where I build and designed it from scratch. As an intern is porting it now to <a href="https://www.quiqqer.com/" rel="noopener" target="_blank">QUIQQER</a> I act as an instructor.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/iban_test/logos/logo_resized.webp" type="image/webp">
-						<source srcset="/images/references/iban_test/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/iban_test/logos/logo_resized.png" alt="IBAN-Test Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="reference-item-myelisting" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.my-elisting.com/" rel="noopener" target="_blank">my.eListing</a> is a website that generates embeddable sliders with images and information of an eBay user's auctions.</p>
-						<p>This was my first project at <a href="https://www.pcsg.de/" rel="noopener" target="_blank">PCSG</a> where I helped extend the site with more modern sliders.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/myelisting/logos/logo_resized.webp" type="image/webp">
-						<source srcset="/images/references/myelisting/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/myelisting/logos/logo_resized.png" alt="my.eListing Logo" loading="lazy">
-					</picture>
-				</div>
-
-
-				<div id="reference-item-passdora" class="reference-item item animate-in grow">
-					<div class="reference-item-overlay">
-						<p><a href="https://www.passdora.de/" rel="noopener" target="_blank">Passdora</a> is a small ready-out-of-the-box on-premise server hosting <a href="https://www.sequry.io/" rel="noopener" target="_blank">Sequry</a>.</p>
-						<p>During an internship, I designed, build, configured, developed and tested the system based on a <a href="https://www.raspberrypi.org/" rel="noopener" target="_blank">Raspberry Pi</a>.</p>
-					</div>
-					<picture>
-						<source srcset="/images/references/passdora/logos/logo_resized.webp" type="image/webp">
-						<source srcset="/images/references/passdora/logos/logo_resized.png" type="image/png">
-						<img src="/images/references/passdora/logos/logo_resized.png" alt="Passdora Logo" loading="lazy">
-					</picture>
-				</div>
-			</div>
-			<div id="references-extend-button" class="button" role="button">
-				<!-- By adding "extended" class to references-extend-button these two are hidden displayed accordingly -->
-				<div id="references-extend-button-show-more-design">
-					<img src="/images/icons/chevron-down.svg" alt="Chevron Down" loading="lazy">
-					<span> Show More References </span>
-					<img src="/images/icons/chevron-down.svg" alt="Chevron Down" loading="lazy">
-				</div>
-				<div id="references-extend-button-show-less-design">
-					<img src="/images/icons/chevron-down.svg" alt="Chevron Up" loading="lazy">
-					<span> Show Less References </span>
-					<img src="/images/icons/chevron-down.svg" alt="Chevron Up" loading="lazy">
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="tools" class="section wb">
-		<div class="container">
-			<div class="section-title text-left">
-				<h3>Tools</h3>
-				<p>Here are some programs, tools and programming languages that I mastered and use on a regular basis:</p>
-			</div>
-
-			<div id="tools-wrapper" class="item-listing">
-				<div id="tool-item-angular" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Angular" style="--balloon-color: #e13338">
-						<img alt="Angular" src="/images/tools/angular.svg"/>
-					</picture>
-				</div>
-
-				<div id="tool-item-terminal" class="item tool-item tool-item-dark">
-                    <picture data-balloon-pos="down" aria-label="Terminal" style="--balloon-color: #020202">
-                        <img alt="Bash/Terminal" src="/images/tools/terminal.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-bootstrap" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Bootstrap" style="--balloon-color: #563D7C">
-						<source srcset="/images/tools/bootstrap.webp" type="image/webp">
-						<source srcset="/images/tools/bootstrap.png" type="image/png">
-						<img src="/images/tools/bootstrap.png" alt="bootstrap Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-chrome" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Chrome" style="--balloon-color: #0F9D58">
-						<source srcset="/images/tools/chrome.webp" type="image/webp">
-						<source srcset="/images/tools/chrome.png" type="image/png">
-						<img src="/images/tools/chrome.png" alt="chrome Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-css" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="CSS" style="--balloon-color: #1672b6">
-                        <img alt="CSS" src="/images/tools/css.svg" style="height: 50px"/>
-					</picture>
-				</div>
-
-				<div id="tool-item-docker" class="item tool-item" style="--balloon-color: #2496ED">
-					<picture data-balloon-pos="down" aria-label="Docker">
-						<source srcset="/images/tools/docker.webp" type="image/webp">
-						<source srcset="/images/tools/docker.png" type="image/png">
-						<img src="/images/tools/docker.png" alt="docker Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-drupal" class="item tool-item" style="--balloon-color: #077AC0">
-					<picture data-balloon-pos="down" aria-label="Drupal">
-						<source srcset="/images/tools/drupal.webp" type="image/webp">
-						<source srcset="/images/tools/drupal.png" type="image/png">
-						<img src="/images/tools/drupal.png" alt="drupal Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-ebay" class="item tool-item" style="--balloon-color: #F5AF02">
-                    <picture data-balloon-pos="down" aria-label="eBay">
-                        <img alt="eBay" src="/images/tools/ebay.svg" />
-                    </picture>
-				</div>
-
-				<div id="tool-item-facebook" class="item tool-item" style="--balloon-color: #1877F2">
-					<picture data-balloon-pos="down" aria-label="Facebook">
-						<source srcset="/images/tools/facebook.webp" type="image/webp">
-						<source srcset="/images/tools/facebook.png" type="image/png">
-						<img src="/images/tools/facebook.png" alt="facebook Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-fontawesome" class="item tool-item" style="--balloon-color: #228AE6">
-                    <picture data-balloon-pos="down" aria-label="FontAwesome">
-                        <img alt="FontAwesome" src="/images/tools/fontawesome.svg" />
-                    </picture>
-				</div>
-
-				<div id="tool-item-git" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="git" style="--balloon-color: #F05033">
-                        <img alt="git" src="/images/tools/git.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-github" class="item tool-item tool-item-dark">
-					<picture data-balloon-pos="down" aria-label="GitHub" style="--balloon-color: #010101">
-                        <img alt="GitHub" src="/images/tools/github.svg" style="height: 50px"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-gitlab" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="GitLab" style="--balloon-color: #E24329">
-                        <img alt="GitLab" src="/images/tools/gitlab.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-google" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Google" style="--balloon-color: #34A853">
-                        <img alt="Google" src="/images/tools/google.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-html" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="HTML" style="--balloon-color: #E44D26">
-                        <img alt="HTML" src="/images/tools/html.svg" style="height: 50px"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-javascript" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="JavaScript" style="--balloon-color: #D6BE00">
-                        <img alt="JavaScript" src="/images/tools/javascript.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-linux" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Linux" style="--balloon-color: #F5BD0C">
-						<source srcset="/images/tools/linux.webp" type="image/webp">
-						<source srcset="/images/tools/linux.png" type="image/png">
-						<img src="/images/tools/linux.png" alt="linux Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-markdown" class="item tool-item tool-item-dark">
-					<picture data-balloon-pos="down" aria-label="Markdown" style="--balloon-color: #000000">
-                        <img alt="Markdown" src="/images/tools/markdown.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-mysql" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="MySQL" style="--balloon-color: #F29213">
-						<source srcset="/images/tools/mysql.webp" type="image/webp">
-						<source srcset="/images/tools/mysql.png" type="image/png">
-						<img src="/images/tools/mysql.png" alt="mysql Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-npm" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="npm" style="--balloon-color: #CB3837">
-                        <img alt="npm" src="/images/tools/npm.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-php" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="PHP" style="--balloon-color: #8993BE">
-                        <img alt="PHP" src="/images/tools/php.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-python" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Python" style="--balloon-color: #FFD849; --balloon-font-color: #3775A9">
-                        <img alt="Python" src="/images/tools/python.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-raspberry-pi" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Raspberry Pi" style="--balloon-color: #BC1142">
-						<source srcset="/images/tools/raspberry-pi.webp" type="image/webp">
-						<source srcset="/images/tools/raspberry-pi.png" type="image/png">
-						<img src="/images/tools/raspberry-pi.png" alt="raspberry-pi Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-sass" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Sass" style="--balloon-color: #CD6799">
-						<source srcset="/images/tools/sass.webp" type="image/webp">
-						<source srcset="/images/tools/sass.png" type="image/png">
-						<img src="/images/tools/sass.png" alt="sass Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-stackoverflow" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Stack Overflow" style="--balloon-color: #919191">
-                        <img alt="Stack Overflow" src="/images/tools/stackoverflow.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-twitter" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Twitter" style="--balloon-color: #1DA1F2">
-						<source srcset="/images/tools/twitter.webp" type="image/webp">
-						<source srcset="/images/tools/twitter.png" type="image/png">
-						<img src="/images/tools/twitter.png" alt="twitter Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-windows" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Windows" style="--balloon-color: #01ADEE">
-                        <img alt="Windows" src="/images/tools/windows.svg"/>
-                    </picture>
-				</div>
-
-				<div id="tool-item-quiqqer" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="QUIQQER" style="--balloon-color: #75B947">
-						<source srcset="/images/tools/quiqqer.webp" type="image/webp">
-						<source srcset="/images/tools/quiqqer.png" type="image/png">
-						<img src="/images/tools/quiqqer.png" alt="QUIQQER Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-ionic" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Ionic" style="--balloon-color: #478AFF">
-						<source srcset="/images/tools/ionic.webp" type="image/webp">
-						<source srcset="/images/tools/ionic.png" type="image/png">
-						<img src="/images/tools/ionic.png" alt="Ionic Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-phpstorm" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="PhpStorm" style="--balloon-color: #A548F0">
-						<source srcset="/images/tools/phpstorm.webp" type="image/webp">
-						<source srcset="/images/tools/phpstorm.png" type="image/png">
-						<img src="/images/tools/phpstorm.png" alt="PhpStorm Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-composer" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Composer" style="--balloon-color: #53422E">
-						<source srcset="/images/tools/composer.webp" type="image/webp">
-						<source srcset="/images/tools/composer.png" type="image/png">
-						<img src="/images/tools/composer.png" alt="Composer Logo" loading="lazy">
-					</picture>
-				</div>
-
-				<div id="tool-item-kubuntu" class="item tool-item">
-					<picture data-balloon-pos="down" aria-label="Kubuntu" style="--balloon-color: #0079C1">
-						<source srcset="/images/tools/kubuntu.webp" type="image/webp">
-						<source srcset="/images/tools/kubuntu.png" type="image/png">
-						<img src="/images/tools/kubuntu.png" alt="Kubuntu Logo" loading="lazy">
-					</picture>
-				</div>
-			</div>
-
-			<p id="tools-text">
-				And probably some more&hellip;
-			</p>
-		</div>
-	</section>
+		</section>
+	</main>
 
     <footer>
-		<div class="container">
-			<div id="footer-socials">
-				<div id="footer-socials-title">
-					<h3>You can also find me on:</h3>
+		<div id="footer-socials">
+			<div id="footer-socials-title">
+				<h3>You can also find me on:</h3>
+			</div>
+			<div id="footer-socials-links">
+				<a href="https://dev.quiqqer.com/Panni" target="_blank" rel="noopener" id="social-link-gitlab">
+					<img src="/images/icons/gitlab.svg" alt="GitLab" loading="lazy">
+				</a>
+				<a href="https://github.com/JanWennrich" target="_blank" rel="noopener" id="social-link-github">
+					<img src="/images/icons/github.svg" alt="Github" loading="lazy">
+				</a>
+				<!-- Base64 encoded mail address is decoded on click, to prevent spam-bots from crawling it -->
+				<!-- It's in a div to prevent 'right-click' > 'copy email-address' causing confusion -->
+				<div onclick="window.open(atob('bWFpbHRvOmphbi53ZW5ucmljaEBwY3NnLmRl'), '_blank')" id="social-link-email">
+					<img src="/images/icons/email.svg" alt="E-Mail" loading="lazy">
 				</div>
-				<div id="footer-socials-links">
-					<a href="https://dev.quiqqer.com/Panni" target="_blank" rel="noopener" id="social-link-gitlab">
-						<img src="/images/icons/gitlab.svg" alt="GitLab" loading="lazy">
-					</a>
-					<a href="https://github.com/JanWennrich" target="_blank" rel="noopener" id="social-link-github">
-						<img src="/images/icons/github.svg" alt="Github" loading="lazy">
-					</a>
-					<!-- Base64 encoded mail address is decoded on click, to prevent spam-bots from crawling it -->
-					<!-- It's in a div to prevent 'right-click' > 'copy email-address' causing confusion -->
-					<div onclick="window.open(atob('bWFpbHRvOmphbi53ZW5ucmljaEBwY3NnLmRl'), '_blank')" id="social-link-email">
-						<img src="/images/icons/email.svg" alt="E-Mail" loading="lazy">
-					</div>
-					<a href="https://www.xing.com/profile/Jan_Wennrich" target="_blank" rel="noopener" id="social-link-xing">
-						<img src="/images/icons/xing.svg" alt="Xing" loading="lazy">
-					</a>
-					<a href="https://www.linkedin.com/in/jan-wennrich-a37bbb1a9/" target="_blank" rel="noopener" id="social-link-linkedin">
-						<img src="/images/icons/linkedin.svg" alt="LinkedIn" loading="lazy">
-					</a>
-				</div>
+				<a href="https://www.xing.com/profile/Jan_Wennrich" target="_blank" rel="noopener" id="social-link-xing">
+					<img src="/images/icons/xing.svg" alt="Xing" loading="lazy">
+				</a>
+				<a href="https://www.linkedin.com/in/jan-wennrich-a37bbb1a9/" target="_blank" rel="noopener" id="social-link-linkedin">
+					<img src="/images/icons/linkedin.svg" alt="LinkedIn" loading="lazy">
+				</a>
 			</div>
 		</div>
     </footer>
