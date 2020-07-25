@@ -16,7 +16,7 @@ html {
 
 
 body {
-    color: #999999;
+    color: #6f6f6f;
     font-size: 14px;
     font-family: 'Roboto Mono', monospace;
     line-height: 1.80857;
@@ -27,7 +27,7 @@ html, body{
 }
 
 a {
-    color: #1f1f1f;
+    color: #000000;
     text-decoration: none;
     outline: none;
     -webkit-transition: all .3s ease-in-out;
@@ -228,7 +228,6 @@ button:hover,
 }
 
 .section-title p {
-    color: #999;
     font-weight: 400;
     font-size: 18px;
     line-height: 33px;
