@@ -72,18 +72,6 @@ h3 {
     font-size: 1.75rem
 }
 
-h4 {
-    font-size: 1.5rem
-}
-
-h5 {
-    font-size: 1.25rem
-}
-
-h6 {
-    font-size: 1rem
-}
-
 .img-fluid {
     max-width: 100%;
     height: auto
@@ -122,28 +110,6 @@ h6 {
     }
 }
 
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px
-}
-
-.col-md-6 {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
-}
-
-.col-md-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%
-}
 
 .nav-link {
     display: block;

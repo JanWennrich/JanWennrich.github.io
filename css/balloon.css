@@ -2,7 +2,6 @@
  * All CSS in here is based on:
  * https://github.com/kazzkiq/balloon.css
  */
-
 :root {
     --balloon-color: #333333;
     --balloon-font-size: inherit;
@@ -55,23 +54,6 @@
     pointer-events: none;
 }
 
-[aria-label][data-balloon-pos].font-awesome:after {
-    font-family: FontAwesome, 'Roboto Mono', monospace;
-}
-
-[aria-label][data-balloon-pos][data-balloon-break]:after {
-    white-space: pre;
-}
-
-[aria-label][data-balloon-pos][data-balloon-break][data-balloon-length]:after {
-    white-space: pre-line;
-    word-break: break-word;
-}
-
-[aria-label][data-balloon-pos][data-balloon-blunt]:before, [aria-label][data-balloon-pos][data-balloon-blunt]:after {
-    transition: none;
-}
-
 [aria-label][data-balloon-pos][data-balloon-pos="down"]:after {
     left: 50%;
     margin-top: var(--balloon-distance);
@@ -95,36 +77,4 @@
 
 [aria-label][data-balloon-pos][data-balloon-pos="down"]:hover:before, [aria-label][data-balloon-pos][data-balloon-pos="down"][data-balloon-visible]:before {
     transform: translate(-50%, 0);
-}
-
-[aria-label][data-balloon-pos][data-balloon-length="small"]:after {
-    white-space: normal;
-    width: 80px;
-}
-
-[aria-label][data-balloon-pos][data-balloon-length="medium"]:after {
-    white-space: normal;
-    width: 150px;
-}
-
-[aria-label][data-balloon-pos][data-balloon-length="large"]:after {
-    white-space: normal;
-    width: 260px;
-}
-
-[aria-label][data-balloon-pos][data-balloon-length="xlarge"]:after {
-    white-space: normal;
-    width: 380px;
-}
-
-@media screen and (max-width: 768px) {
-    [aria-label][data-balloon-pos][data-balloon-length="xlarge"]:after {
-        white-space: normal;
-        width: 90vw;
-    }
-}
-
-[aria-label][data-balloon-pos][data-balloon-length="fit"]:after {
-    white-space: normal;
-    width: 100%;
 }

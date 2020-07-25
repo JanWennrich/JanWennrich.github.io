@@ -8,12 +8,6 @@ html {
     scroll-behavior: smooth;
 }
 
-@font-face {
-    font-family: 'Roboto Mono', monospace;
-    font-display: swap;
-    src: local('Roboto Mono'), url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
-}
-
 
 body {
     color: #6f6f6f;
@@ -64,28 +58,6 @@ h3 {
     font-size: 18px
 }
 
-h4 {
-    font-size: 16px
-}
-
-h5 {
-    font-size: 14px
-}
-
-h6 {
-    font-size: 13px
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-    color: #212121;
-    text-decoration: none!important;
-    opacity: 1
-}
 
 a {
     color: #222222;
@@ -184,22 +156,20 @@ button:hover,
     SECTIONS
 -------------------------------------------------------------------*/
 
-.heading{
+#avatar-wrapper{
     color: #fff;
     display: table-cell;
     vertical-align: middle;
     position: relative;
     z-index: 1;
+    grid-row: 1;
+    place-self: center;
+    pointer-events: none;
 }
-.heading h1{
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 62px;
-    text-transform: uppercase;
-}
-.heading p{
+
+#avatar-wrapper p{
     font-size: 18px;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 
 #skills-typewriter {
@@ -238,16 +208,6 @@ button:hover,
     margin: 0 0 25px;
     padding: 0;
     text-transform: none;
-}
-
-.right-box-pro{
-    position: relative;
-    -webkit-box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.3);
-}
-.right-box-pro img{
-    position: relative;
-    z-index: 2;
 }
 
 
@@ -334,21 +294,6 @@ button:hover,
 .skill-box h2{
     font-size: 22px;
     font-weight: 600;
-}
-
-
-.message-box h2 {
-    font-size: 38px;
-    font-weight: 300;
-    padding: 0 0 10px;
-    margin: 0;
-    line-height: 62px;
-    margin-top: 0;
-    text-transform: none;
-}
-
-.message-box p {
-    margin-bottom: 20px;
 }
 
 
@@ -441,27 +386,6 @@ button:hover,
     display: none;
 }
 
-.dmtop {
-    background-color: #3C3D41;
-    z-index: 100;
-    width: 50px;
-    height: 50px;
-    line-height: 47px;
-    position: fixed;
-    bottom: -100px;
-    border-radius: 3px;
-    right: 50px;
-    text-align: center;
-    font-size: 28px;
-    color: #ffffff !important;
-    cursor: pointer;
-    -webkit-transition: all .7s ease-in-out;
-    -moz-transition: all .7s ease-in-out;
-    -o-transition: all .7s ease-in-out;
-    -ms-transition: all .7s ease-in-out;
-    transition: all .7s ease-in-out;
-}
-
 
 nav#mainNav {
     background-size: 100% 200%;
@@ -488,12 +412,6 @@ nav#mainNav.with-background {
     text-align: center;
     height: 100vh;
     color: white;
-}
-
-div.heading {
-    grid-row: 1;
-    place-self: center;
-    pointer-events: none;
 }
 
 #down-button {
