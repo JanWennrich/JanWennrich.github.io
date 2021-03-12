@@ -436,6 +436,10 @@ nav > .container {
     filter: invert(1);
 }
 
+#reference-item-brassberg img {
+    filter: invert(1);
+}
+
 .reference-item img {
     max-width: 250px;
     max-height: 250px;
