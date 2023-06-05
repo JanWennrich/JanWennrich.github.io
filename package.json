@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "critical": "^5.1.1",
-    "purgecss": "^2.3.0"
+    "purgecss": "^5.0.0"
   },
   "scripts": {
     "purge-css": "purgecss --config assets/purgecss/config.js --output css/purged",
