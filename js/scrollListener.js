@@ -118,30 +118,26 @@
      * Disables star movement when scrolled past home section to improve performance.
      * Re-enables it when scrolling to home section.
      */
-    function toggleStarMovement()
-    {
-        if (typeof MyStars === 'undefined') {
-            return;
-        }
+    function toggleStarMovement() {
+        new IntersectionObserver(function (observerEntries, observer) {
+            observerEntries.forEach(function (entry) {
+                if (typeof MyStars === 'undefined') {
+                    return;
+                }
 
-        let isScrolledPastHome = window.scrollY > homeSectionEnd;
+                if (!entry.isIntersecting) {
+                    MyStars.stopMoving()
 
-        let isMoving = MyStars.isMoving();
+                    return;
+                }
 
-        if (isScrolledPastHome && isMoving) {
-            MyStars.stopMoving();
-
-            return;
-        }
-
-        if (!isScrolledPastHome && !isMoving) {
-            MyStars.startMoving();
-        }
+                MyStars.startMoving()
+            });
+        }, {threshold: 0.25}).observe(HomeSection);
     }
 
     document.addEventListener('scroll', throttle(() => {
         setScrollStatus();
-        toggleStarMovement();
     }, 250), {capture: false, passive: true});
 
     fadeoutHomeSection();
