@@ -1,6 +1,6 @@
 // Wrapped in a closure to prevent global variables
 (() => {
-    var NavBar = document.getElementById('mainNav');
+    const NavBar = document.getElementById('mainNav');
 
     const HomeSection = document.getElementById('home');
 
