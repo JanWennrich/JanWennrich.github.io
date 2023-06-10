@@ -26,7 +26,7 @@
                 animateElementsObserver.unobserve(targetElement);
                 targetElement.classList.add("animate-in-run");
             });
-        }, {threshold: 1});
+        }, {threshold: 0.75});
 
         animatedItems.forEach(function (animatedItem) {
             animateElementsObserver.observe(animatedItem);
