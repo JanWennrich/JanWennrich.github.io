@@ -80,15 +80,25 @@
      * Sets the brightness of the home-section depending on the scroll distance.
      * The further the user scrolled the darker the home section becomes
      */
-    function fadeoutHomeSection()
-    {
-        if (window.scrollY > homeSectionEnd) {
-            return;
-        }
+    function fadeoutHomeSection() {
+        new IntersectionObserver(function (observerEntries, observer) {
+            observerEntries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                    return;
+                }
 
-        var brightness = 1 - (window.scrollY / homeSectionEnd);
-
-        HomeSection.style.filter = 'brightness(' + brightness + ')';
+                HomeSection.style.filter = 'brightness(' + entry.intersectionRatio + ')';
+            });
+        }, {
+            threshold: [
+                0,
+                0.2,
+                0.4,
+                0.6,
+                0.8,
+                1
+            ]
+        }).observe(HomeSection);
     }
 
     function setScrollStatus()
@@ -130,7 +140,6 @@
     }
 
     document.addEventListener('scroll', throttle(() => {
-        fadeoutHomeSection();
         setScrollStatus();
         toggleStarMovement();
     }, 250), {capture: false, passive: true});
