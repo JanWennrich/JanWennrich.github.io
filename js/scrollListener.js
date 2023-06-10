@@ -5,9 +5,9 @@
         NavLinkSkillset   = document.getElementById('nav-link-skillset'),
         NavLinkReferences = document.getElementById('nav-link-references');
 
-    var HomeSection      = document.getElementById('home'),
-        homeSectionStart = HomeSection.offsetTop,
-        homeSectionEnd   = HomeSection.offsetTop + HomeSection.offsetHeight - NavBar.offsetHeight;
+    const HomeSection = document.getElementById('home'),
+          homeSectionStart = HomeSection.offsetTop,
+          homeSectionEnd   = HomeSection.offsetTop + HomeSection.offsetHeight - NavBar.offsetHeight;
 
     var AboutSection      = document.getElementById('about'),
         aboutSectionStart = AboutSection.offsetTop - NavBar.offsetHeight;
@@ -44,20 +44,19 @@
     /**
      * Adds class "with-background" to the nav bar if the window is scrolled past the Home section.
      */
-    function styleNavbar()
-    {
-        var isScrolling = window.scrollY > 0;
+    function animateNavbar() {
+        const styleNavbarObserver = new IntersectionObserver(function (observerEntries, observer) {
+            observerEntries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                    NavBar.classList.add('with-background');
+                    return;
+                }
 
-        if (isScrolling && NavBar.classList.contains('with-background')) {
-            return;
-        }
+                NavBar.classList.remove('with-background');
+            });
+        }, {threshold: 1});
 
-        if (isScrolling) {
-            NavBar.classList.add('with-background');
-            return;
-        }
-
-        NavBar.classList.remove('with-background');
+        styleNavbarObserver.observe(HomeSection);
     }
 
     /**
@@ -172,7 +171,6 @@
     }
 
     document.addEventListener('scroll', throttle(() => {
-        styleNavbar();
         updateNavLinks();
         fadeoutHomeSection();
         setScrollStatus();
@@ -183,7 +181,7 @@
 
     // Initially style the navbar correctly if we're already scrolled past home section.
     // This could happen if the page get's reloaded.
-    styleNavbar();
+    animateNavbar();
 
     // Initially update the nav-links to set the correct link active.
     // The correct link is the section that's currently in view.
