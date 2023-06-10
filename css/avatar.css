@@ -71,19 +71,10 @@
     width: 42px;
 }
 
-body.is-scrolling #avatar-left-eyebrow,
-body.is-scrolling #avatar-right-eyebrow {
-    top: 75px;
-}
-
 #avatar-left-eyebrow {
     position: absolute;
     left: calc(50% - 50px);
     transform: scaleX(-1);
-}
-
-body.is-scrolling #avatar-left-eyebrow {
-    transform: scaleX(-1) rotate(10deg);
 }
 
 #avatar-right-eyebrow {
@@ -91,23 +82,12 @@ body.is-scrolling #avatar-left-eyebrow {
     right: calc(50% - 50px);
 }
 
-body.is-scrolling #avatar-right-eyebrow {
-    transform: rotate(10deg);
-}
-
-
 #avatar-chin {
     position: absolute;
     top: 197px;
     width: 55px;
     z-index: 6;
 }
-
-body.is-scrolling #avatar-chin {
-    top: 210px;
-    width: 18px;
-}
-
 
 #avatar.is-talking #avatar-chin {
     top: 205px;

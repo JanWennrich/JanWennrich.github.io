@@ -14,8 +14,6 @@
 
     const animatedItems = document.querySelectorAll('.animate-in');
 
-    var isScrollingTimeout = false;
-
     function animateElements() {
         const animateElementsObserver = new IntersectionObserver(function (entries, observer) {
             entries.forEach(function (entry) {
@@ -101,19 +99,6 @@
         }).observe(HomeSection);
     }
 
-    function setScrollStatus()
-    {
-        document.body.classList.add('is-scrolling');
-
-        // Clear our timeout throughout the scroll
-        window.clearTimeout(isScrollingTimeout);
-
-        // Set a timeout to run after scrolling ends
-        isScrollingTimeout = setTimeout(() => {
-            document.body.classList.remove('is-scrolling');
-        }, 300);
-    }
-
     /**
      * Disables star movement when scrolled past home section to improve performance.
      * Re-enables it when scrolling to home section.
@@ -135,10 +120,6 @@
             });
         }, {threshold: 0.25}).observe(HomeSection);
     }
-
-    document.addEventListener('scroll', throttle(() => {
-        setScrollStatus();
-    }, 250), {capture: false, passive: true});
 
     fadeoutHomeSection();
 
