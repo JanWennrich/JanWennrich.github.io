@@ -1,22 +1,16 @@
 // Wrapped in a closure to prevent global variables
 (() => {
-    var NavBar            = document.getElementById('mainNav'),
-        NavLinkAbout      = document.getElementById('nav-link-about'),
-        NavLinkSkillset   = document.getElementById('nav-link-skillset'),
-        NavLinkReferences = document.getElementById('nav-link-references');
+    var NavBar = document.getElementById('mainNav');
 
     const HomeSection = document.getElementById('home'),
           homeSectionStart = HomeSection.offsetTop,
           homeSectionEnd   = HomeSection.offsetTop + HomeSection.offsetHeight - NavBar.offsetHeight;
 
-    var AboutSection      = document.getElementById('about'),
-        aboutSectionStart = AboutSection.offsetTop - NavBar.offsetHeight;
+    const AboutSection = document.getElementById('about');
 
-    var SkillsetSection      = document.getElementById('skillset'),
-        skillsetSectionStart = SkillsetSection.offsetTop - NavBar.offsetHeight;
+    const SkillsetSection = document.getElementById('skillset');
 
-    var ReferencesSection      = document.getElementById('references'),
-        referencesSectionStart = ReferencesSection.offsetTop - NavBar.offsetHeight;
+    const ReferencesSection = document.getElementById('references');
 
     const animatedItems = document.querySelectorAll('.animate-in');
 
@@ -62,58 +56,23 @@
     /**
      * Adds class "active" to the currently viewed section's nav-link.
      */
-    function updateNavLinks()
-    {
-        var isScrolledPastReferences = window.scrollY > referencesSectionStart;
+    function animateNavLinks() {
+        const navLinkUpdateObserver = new IntersectionObserver(function (observerEntries, observer) {
+            observerEntries.forEach(function (entry) {
+                const NavLink = document.getElementById(entry.target.dataset.navLinkId);
 
-        if (isScrolledPastReferences) {
-            addActiveClassToElement(NavLinkReferences);
+                if (!entry.isIntersecting) {
+                    NavLink.classList.remove('active');
+                    return;
+                }
 
-            return;
-        }
+                NavLink.classList.add('active');
+            });
+        }, {threshold: 0.6});
 
-        var isScrolledPastSkillset = window.scrollY > skillsetSectionStart;
-
-        if (isScrolledPastSkillset) {
-            addActiveClassToElement(NavLinkSkillset);
-
-            return;
-        }
-
-        var isScrolledPastAbout = window.scrollY > aboutSectionStart;
-
-        if (isScrolledPastAbout) {
-            addActiveClassToElement(NavLinkAbout);
-
-            return;
-        }
-
-        resetNavLinks();
-    }
-
-    /**
-     * Adds the class "active" to the given element.
-     *
-     * @param Element
-     */
-    function addActiveClassToElement(Element)
-    {
-        // Only reset other items and set it active, if it isn't already active
-        if (!Element.classList.contains('active')) {
-            resetNavLinks();
-
-            Element.classList.add('active');
-        }
-    }
-
-    /**
-     * Removes class "active" from all nav-links
-     */
-    function resetNavLinks()
-    {
-        NavLinkAbout.classList.remove('active');
-        NavLinkSkillset.classList.remove('active');
-        NavLinkReferences.classList.remove('active');
+        navLinkUpdateObserver.observe(AboutSection);
+        navLinkUpdateObserver.observe(SkillsetSection);
+        navLinkUpdateObserver.observe(ReferencesSection);
     }
 
 
@@ -171,7 +130,6 @@
     }
 
     document.addEventListener('scroll', throttle(() => {
-        updateNavLinks();
         fadeoutHomeSection();
         setScrollStatus();
         toggleStarMovement();
@@ -186,7 +144,7 @@
     // Initially update the nav-links to set the correct link active.
     // The correct link is the section that's currently in view.
     // This could be something different than home, if the page get's reloaded.
-    updateNavLinks();
+    animateNavLinks();
 
     toggleStarMovement();
 
