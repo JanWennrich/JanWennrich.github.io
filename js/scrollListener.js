@@ -18,29 +18,27 @@
     var ReferencesSection      = document.getElementById('references'),
         referencesSectionStart = ReferencesSection.offsetTop - NavBar.offsetHeight;
 
-    var animatedItems = document.getElementsByClassName('animate-in');
+    const animatedItems = document.querySelectorAll('.animate-in');
 
     var isScrollingTimeout = false;
 
-    function animateElements()
-    {
-        for (let Item of animatedItems) {
-            if (isElementInView(Item, 100)) {
-                Item.classList.add('animate-in-run');
-            }
-        }
-    }
+    function animateElements() {
+        const animateElementsObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                    return;
+                }
 
-    function isElementInView(Element, offset = 0)
-    {
-        let rect = Element.getBoundingClientRect();
+                const targetElement = entry.target;
 
-        return (
-            rect.top + offset >= 0 &&
-            rect.left + offset >= 0 &&
-            rect.bottom - offset <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right - offset <= (window.innerWidth || document.documentElement.clientWidth)
-        );
+                animateElementsObserver.unobserve(targetElement);
+                targetElement.classList.add("animate-in-run");
+            });
+        }, {threshold: 1});
+
+        animatedItems.forEach(function (animatedItem) {
+            animateElementsObserver.observe(animatedItem);
+        });
     }
 
     /**
@@ -179,8 +177,6 @@
         fadeoutHomeSection();
         setScrollStatus();
         toggleStarMovement();
-        animateElements()
-
     }, 250), {capture: false, passive: true});
 
     fadeoutHomeSection();
