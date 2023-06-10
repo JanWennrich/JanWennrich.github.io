@@ -2,9 +2,7 @@
 (() => {
     var NavBar = document.getElementById('mainNav');
 
-    const HomeSection = document.getElementById('home'),
-          homeSectionStart = HomeSection.offsetTop,
-          homeSectionEnd   = HomeSection.offsetTop + HomeSection.offsetHeight - NavBar.offsetHeight;
+    const HomeSection = document.getElementById('home');
 
     const AboutSection = document.getElementById('about');
 
