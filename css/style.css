@@ -468,6 +468,30 @@ nav > .container {
     opacity: 1;
 }
 
+.reference-item-tags {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.reference-item-tag {
+    background-color: rgba(25, 24, 41, 0.95);
+    color: white;
+    border-radius: 10px;
+    padding: 1px 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.reference-item-tag::before {
+    content: '#';
+}
+
 
 #references-extend-button {
     width: 320px;
