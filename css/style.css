@@ -404,10 +404,14 @@ nav > .container {
 
 
 #references-wrapper {
-    max-height: 730px; /* Using max-height here for a working transition */
+    max-height: calc(525px * 2 + 50px); /* Using max-height here for a working transition */
 
     overflow: hidden;
     transition: max-height 1250ms;
+
+    gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
@@ -418,10 +422,19 @@ nav > .container {
 
 .reference-item {
     background: #ffffff;
-    width: 320px;
-    height: 320px;
+    width: 350px;
+    height: 525px;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
+    margin: 0;
+    justify-content: initial;
+    align-items: center;
+}
+
+.reference-item-logo {
+    height: 150px;
+    display: flex;
+    align-items: center;
 }
 
 #reference-item-bdwb img {
@@ -446,34 +459,12 @@ nav > .container {
     max-height: 250px;
 }
 
-.reference-item-overlay {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    background: rgba(25, 24, 41, 0.95);
-    padding: 30px;
-    transition: visibility 0s, opacity 0.25s linear;
-    color: white;
-}
-
-.reference-item-overlay a {
-    color: #56b0ff;
-}
-
-
-.reference-item:hover .reference-item-overlay {
-    visibility: visible;
-    opacity: 1;
-}
-
 .reference-item-tags {
-    margin-top: 20px;
+    height: 125px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: flex-end;
+    align-content: center;
     justify-content: center;
     align-items: flex-end;
     gap: 5px;
@@ -492,9 +483,13 @@ nav > .container {
     content: '#';
 }
 
+.reference-item-description {
+    height: calc(525px - 125px - 150px);
+}
+
 
 #references-extend-button {
-    width: 320px;
+    width: 350px;
 }
 
 #references-extend-button img {
