@@ -404,7 +404,7 @@ nav > .container {
 
 
 #references-wrapper {
-    max-height: calc(525px * 2 + 50px); /* Using max-height here for a working transition */
+    max-height: calc(525px * 2 + 40px); /* Using max-height here for a working transition */
 
     overflow: hidden;
     transition: max-height 1250ms;
@@ -412,6 +412,8 @@ nav > .container {
     gap: 30px;
     flex-direction: row;
     flex-wrap: wrap;
+
+    padding-bottom: 10px; /* make sure drop shadows are not cut off */
 }
 
 
@@ -484,6 +486,7 @@ nav > .container {
 
 #references-extend-button {
     width: 350px;
+    margin-top: 20px;
 }
 
 #references-extend-button img {
