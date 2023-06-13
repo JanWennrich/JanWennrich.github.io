@@ -429,21 +429,16 @@ nav > .container {
     margin: 0;
     justify-content: initial;
     align-items: center;
+    display: grid;
+    grid-template-rows: 135px 1fr 75px;
 }
 
 .reference-item-logo {
-    height: 150px;
-    display: flex;
-    align-items: center;
-}
-
-#reference-item-bdwb img {
-    filter: none;
-}
-
-#reference-item-hkl img {
-    max-width: 200px;
-    max-height: 200px;
+    display: grid;
+    place-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 #reference-item-myelisting img {
@@ -455,12 +450,11 @@ nav > .container {
 }
 
 .reference-item img {
-    max-width: 250px;
-    max-height: 250px;
+    max-height: 100px;
+    max-width: 100%;
 }
 
 .reference-item-tags {
-    height: 125px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -471,12 +465,13 @@ nav > .container {
 }
 
 .reference-item-tag {
-    background-color: rgba(25, 24, 41, 0.95);
-    color: white;
+    background-color: rgb(221 221 221);
+    color: #191829;
     border-radius: 10px;
     padding: 1px 10px;
     flex-grow: 1;
     text-align: center;
+    font-size: 12px;
 }
 
 .reference-item-tag::before {
@@ -484,9 +479,8 @@ nav > .container {
 }
 
 .reference-item-description {
-    height: calc(525px - 125px - 150px);
+    align-self: flex-start;
 }
-
 
 #references-extend-button {
     width: 350px;
