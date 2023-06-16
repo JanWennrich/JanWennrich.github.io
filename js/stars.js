@@ -113,4 +113,4 @@ class Particle {
 }
 
 
-var MyStars = new Stars(document.getElementById('stars'), 80);
+const MyStars = new Stars(document.getElementById('stars'), 80);

@@ -1,5 +1,5 @@
 (function() {
-    var Overlay = document.createElement('div');
+    const Overlay = document.createElement('div');
 
     Overlay.className = 'overlay';
     Overlay.id = 'ancient-browser-overlay';

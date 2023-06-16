@@ -808,13 +808,13 @@ Cheers!
 		// as much as it can, without ever going more than once per `wait` duration.
 		// Based on the underscore.js implementation, taken from: https://stackoverflow.com/a/27078401
 		function throttle(func, wait, options) {
-			var context, args, result;
-			var timeout = null;
-			var previous = 0;
+			let context, args, result;
+			let timeout = null;
+			let previous = 0;
 			if (!options) {
 				options = {};
 			}
-			var later = function () {
+			const later = function () {
 				previous = options.leading === false ? 0 : Date.now();
 				timeout = null;
 				result = func.apply(context, args);
@@ -822,12 +822,13 @@ Cheers!
 					context = args = null;
 				}
 			};
+
 			return function () {
-				var now = Date.now();
+				const now = Date.now();
 				if (!previous && options.leading === false) {
 					previous = now;
 				}
-				var remaining = wait - (now - previous);
+				const remaining = wait - (now - previous);
 				context = this;
 				args = arguments;
 				if (remaining <= 0 || remaining > wait) {
@@ -860,14 +861,14 @@ Cheers!
 		{
 
 			// Set up a timer
-			var timeout;
+			let timeout;
 
 			// Return a function to run debounced
 			return function () {
 
 				// Set up the arguments
-				var context = this;
-				var args = arguments;
+				const context = this;
+				const args = arguments;
 
 				// If there's a timer, cancel it
 				if (timeout) {
@@ -896,18 +897,18 @@ Cheers!
 
 	<script>
 		(() => {
-			var HomeSection = document.getElementById('home'),
-				Eyes         = HomeSection.getElementsByClassName('avatar-eye');
+			const HomeSection = document.getElementById('home'),
+				  Eyes        = HomeSection.getElementsByClassName('avatar-eye');
 
 			HomeSection.addEventListener('mousemove', throttle(event => {
-				 for (var Eye of Eyes) {
-					var eyeBoundingClientRect = Eye.getBoundingClientRect(),
-						x   = (eyeBoundingClientRect.x) + (eyeBoundingClientRect.width / 2),
-						y   = (eyeBoundingClientRect.y) + (eyeBoundingClientRect.height / 2),
-						rad = Math.atan2(event.pageX - x, event.pageY - y),
-						rot = (rad * (180 / Math.PI) * -1) + 180;
+				 for (const Eye of Eyes) {
+					 const eyeBoundingClientRect = Eye.getBoundingClientRect(),
+						   x                     = (eyeBoundingClientRect.x) + (eyeBoundingClientRect.width / 2),
+						   y                     = (eyeBoundingClientRect.y) + (eyeBoundingClientRect.height / 2),
+						   rad                   = Math.atan2(event.pageX - x, event.pageY - y),
+						   rot                   = (rad * (180 / Math.PI) * -1) + 180;
 
-					Eye.style.transform = 'rotate(' + rot + 'deg)';
+					 Eye.style.transform = 'rotate(' + rot + 'deg)';
 				}
 			}, 60), {capture: false, passive: true});
 		})();
@@ -915,7 +916,7 @@ Cheers!
 
 	<script>
 		if (isIE11()) {
-			var Script = document.createElement('script');
+			const Script = document.createElement('script');
 			Script.type = 'text/javascript';
 			Script.src = '/js/ancientBrowser.js';
 

@@ -1,7 +1,8 @@
 (() => {
-    var Avatar      = document.getElementById('avatar'),
-        Writer      = new TypeWriter('#skills-typewriter', {loop: true}),
-        shouldTalk  = false,
+    const Avatar = document.getElementById('avatar'),
+          Writer = new TypeWriter('#skills-typewriter', {loop: true});
+
+    let shouldTalk  = false,
 
         // Is the typewriter currently typing?
         isTyping    = false,
@@ -37,7 +38,7 @@
     {
         Avatar.classList.add('is-talking');
 
-        var rand = Math.round(Math.random() * 100) + 150;
+        const rand = Math.round(Math.random() * 100) + 150;
         setTimeout(() => {
             Avatar.classList.remove('is-talking');
 
