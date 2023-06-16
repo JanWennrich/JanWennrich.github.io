@@ -44,7 +44,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     position: relative;
     padding: 0 0 10px 0;
-    font-weight: normal;
     line-height: 120% !important;
     color: #333333;
     margin: 0
@@ -226,7 +225,7 @@ nav > .container {
     right: 0;
     text-align: center;
     margin: 0 auto;
-    border-radius: 0px;
+    border-radius: 0;
     -webkit-transition: all .5s;
     transition: all .5s;
     z-index: -1;
