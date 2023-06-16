@@ -8,6 +8,23 @@
     box-sizing: border-box
 }
 
+/* quicksand-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/quicksand-v30-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* quicksand-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/quicksand-v30-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -16,7 +33,7 @@ html {
 body {
     color: #6f6f6f;
     font-size: 14px;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Quicksand', sans-serif;
     line-height: 1.80857;
     margin: 0;
     font-weight: 400;
@@ -398,7 +415,7 @@ nav > .container {
 
 .skill-box h2 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
