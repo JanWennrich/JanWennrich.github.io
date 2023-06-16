@@ -14,7 +14,7 @@
                             '<a href="https://www.apple.com/de/safari/" rel="nofollow noopener" target="_blank">Safari</a> or even ' +
                             '<a href="https://www.microsoft.com/edge" rel="nofollow noopener" target="_blank">Edge</a>.' +
                         '</p>' +
-                        '<p>If you want to look around anyways:</p>' +
+                        '<p>If you want to look around anyway:</p>' +
                         '<p>'+
                             '<button onclick="'+
                                 'document.getElementById(\'ancient-browser-overlay\').style.display = \'none\';' +

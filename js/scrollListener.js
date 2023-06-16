@@ -98,8 +98,8 @@
     }
 
     /**
-     * Disables star movement when scrolled past home section to improve performance.
-     * Re-enables it when scrolling to home section.
+     * Disables star movement when scrolled past the home section to improve performance.
+     * Re-enables it when scrolling to the home section.
      */
     function toggleStarMovement() {
         new IntersectionObserver(function (observerEntries, observer) {
@@ -121,13 +121,13 @@
 
     fadeoutHomeSection();
 
-    // Initially style the navbar correctly if we're already scrolled past home section.
-    // This could happen if the page get's reloaded.
+    // Initially style the navbar correctly if we're already scrolled past the home section.
+    // This could happen if the page is reloaded.
     animateNavbar();
 
     // Initially update the nav-links to set the correct link active.
     // The correct link is the section that's currently in view.
-    // This could be something different than home, if the page get's reloaded.
+    // This could be something different from home if the page is reloaded.
     animateNavLinks();
 
     toggleStarMovement();
