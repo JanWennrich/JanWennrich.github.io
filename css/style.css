@@ -542,10 +542,6 @@ nav#mainNav.with-background {
     height: 30px;
 }
 
-#nav-link-about {
-    word-spacing: -0.3em;
-}
-
 #home {
     display: grid;
     grid-template-rows: 90% 10%;
