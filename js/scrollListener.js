@@ -13,7 +13,7 @@
     const animatedItems = document.querySelectorAll('.animate-in');
 
     function animateElements() {
-        const animateElementsObserver = new IntersectionObserver(function (entries, observer) {
+        const animateElementsObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (!entry.isIntersecting) {
                     return;
@@ -35,7 +35,7 @@
      * Adds class "with-background" to the nav bar if the window is scrolled past the Home section.
      */
     function animateNavbar() {
-        const styleNavbarObserver = new IntersectionObserver(function (observerEntries, observer) {
+        const styleNavbarObserver = new IntersectionObserver(function (observerEntries) {
             observerEntries.forEach(function (entry) {
                 if (!entry.isIntersecting) {
                     NavBar.classList.add('with-background');
@@ -53,7 +53,7 @@
      * Adds class "active" to the currently viewed section's nav-link.
      */
     function animateNavLinks() {
-        const navLinkUpdateObserver = new IntersectionObserver(function (observerEntries, observer) {
+        const navLinkUpdateObserver = new IntersectionObserver(function (observerEntries) {
             observerEntries.forEach(function (entry) {
                 const NavLink = document.getElementById(entry.target.dataset.navLinkId);
 
@@ -77,7 +77,7 @@
      * The further the user scrolled the darker the home section becomes
      */
     function fadeoutHomeSection() {
-        new IntersectionObserver(function (observerEntries, observer) {
+        new IntersectionObserver(function (observerEntries) {
             observerEntries.forEach(function (entry) {
                 if (!entry.isIntersecting) {
                     return;
@@ -102,7 +102,7 @@
      * Re-enables it when scrolling to the home section.
      */
     function toggleStarMovement() {
-        new IntersectionObserver(function (observerEntries, observer) {
+        new IntersectionObserver(function (observerEntries) {
             observerEntries.forEach(function (entry) {
                 if (typeof MyStars === 'undefined') {
                     return;

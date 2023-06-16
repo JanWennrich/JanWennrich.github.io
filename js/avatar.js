@@ -70,7 +70,7 @@
             textsToType = [...texts];
 
             // This .sort call kind of randomizes the array (source: https://stackoverflow.com/a/18650169)
-            textsToType.sort(element => 0.5 - Math.random());
+            textsToType.sort(() => 0.5 - Math.random());
         }
 
         // Pick a random text to type
