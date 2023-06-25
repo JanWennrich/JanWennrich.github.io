@@ -1,92 +1,85 @@
-(() => {
-    const Avatar = document.getElementById('avatar'),
-          Writer = new TypeWriter('#skills-typewriter', {loop: true});
+import Typed from '/js/typed.min.js';
 
-    let shouldTalk  = false,
+"use strict";
 
-        // Is the typewriter currently typing?
-        isTyping    = false,
+class TalkingAvatar{
+    Avatar = document.getElementById('avatar');
+    Writer = new Typed('#skills-typewriter', {shuffle: true, loop: true});
 
-        // Texts the typewriter still has to type
-        textsToType = [];
+    shouldTalk  = false;
 
-    // Texts the typewriter should type
-    const texts = [
-        'Web Developer',
-        'App Developer',
-        'Software Developer',
-        'Project Manager',
-        'Bachelor of Computer Science',
-        'Problem Solver',
-        'Nerd',
-        'Linux Lover',
-        'CLI Connoisseur',
-        'Git Guru',
-        'PHP Professional',
-        'JavaScript Joyrider',
-        'SQL Squire'
-    ];
+    // Is the typewriter currently typing?
+    isTyping    = false;
 
+    // Texts the typewriter still has to type
+    // TODO: read texts from HTML (better SEO)
+    textsToType = [];
 
-    async function startTalking()
+    async startTalking()
     {
-        shouldTalk = true;
-        talk();
+        this.shouldTalk = true;
+        this.talk();
     }
 
-    function talk()
+    talk()
     {
-        Avatar.classList.add('is-talking');
+        this.Avatar.classList.add('is-talking');
 
         const rand = Math.round(Math.random() * 100) + 150;
         setTimeout(() => {
-            Avatar.classList.remove('is-talking');
+            this.Avatar.classList.remove('is-talking');
 
-            if (!shouldTalk) {
+            if (!this.shouldTalk) {
                 return;
             }
 
             setTimeout(() => {
-                if (shouldTalk) {
-                    talk();
+                if (this.shouldTalk) {
+                    this.talk();
                 }
             }, rand);
         }, rand);
     }
 
-    async function stopTalking()
+    async stopTalking()
     {
-        shouldTalk = false;
-        Avatar.classList.remove('is-talking');
+        this.shouldTalk = false;
+        this.Avatar.classList.remove('is-talking');
     }
 
 
-    function talkWords(speed = 100)
+    talkWords(speed = 100)
     {
-        isTyping = true;
+        this.isTyping = true;
 
-        if (textsToType.length === 0) {
+        if (this.textsToType.length === 0) {
             // clone from the default texts
-            textsToType = [...texts];
+            this.textsToType = [...texts];
 
             // This .sort call kind of randomizes the array (source: https://stackoverflow.com/a/18650169)
-            textsToType.sort(() => 0.5 - Math.random());
+            this.textsToType.sort(() => 0.5 - Math.random());
         }
 
         // Pick a random text to type
-        let text = textsToType.pop();
+        let text = this.textsToType.pop();
 
-        Writer.erase(999999, speed / 2)
-            .callBack(startTalking)
-            .write(text, {speed: speed})
-            .callBack(stopTalking)
-            .wait(speed * 7)
-            .callBack(() => {isTyping = false});
+        this.Writer.erase(999999, speed / 2)
+              .callBack(this.startTalking)
+              .write(text, {speed: speed})
+              .callBack(this.stopTalking)
+              .wait(speed * 7)
+              .callBack(() => {this.isTyping = false});
     }
+}
+
+export default TalkingAvatar;
+
+(() => {
+    const MyAvatar = new TalkingAvatar();
 
     setInterval(() => {
-        if (!isTyping) {
-            talkWords();
+        if (!MyAvatar.isTyping) {
+            MyAvatar.talkWords();
         }
     }, 250);
-})();
+})()
